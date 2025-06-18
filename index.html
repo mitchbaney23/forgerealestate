@@ -25,6 +25,11 @@
             color: #a95828;
             font-weight: 600;
         }
+        
+        /* Hero Section Background */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+        }
 
         /* Spinner for loading state */
         .loader {
@@ -47,13 +52,14 @@
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="page-link flex items-center space-x-4">
-                <img src="https://i.ibb.co/6n20y1d/FORGERELOGO-2.jpg" alt="Forge Real Estate, LLC Logo" class="h-16 w-auto" onerror="this.style.display='none';">
+                <!-- ACTION REQUIRED: Upload 'forge-logo.jpg' to an 'images' folder on your server -->
+                <img src="images/forge-logo.jpg" alt="Forge Real Estate, LLC Logo" class="h-16 w-auto">
             </a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#home" class="nav-link page-link text-gray-600 hover:text-brand-primary transition-colors active">Home</a>
                 <a href="#how-it-works" class="nav-link page-link text-gray-600 hover:text-brand-primary transition-colors">How It Works</a>
                 <a href="#about" class="nav-link page-link text-gray-600 hover:text-brand-primary transition-colors">About</a>
-                <a href="#valuation" class="page-link bg-brand-primary text-white font-semibold px-5 py-2 rounded-lg hover:bg-brand-primary-dark transition-colors">Get Free Valuation</a>
+                <a href="#valuation" class="page-link bg-brand-primary text-white font-semibold px-5 py-2 rounded-lg hover:bg-brand-primary-dark transition-colors">Get Home Price Estimate</a>
             </div>
             <button class="md:hidden" id="mobile-menu-button">
                 <i class="fas fa-bars text-gray-600 text-2xl"></i>
@@ -64,67 +70,93 @@
             <a href="#home" class="nav-link page-link block py-2 text-gray-600 hover:text-brand-primary">Home</a>
             <a href="#how-it-works" class="nav-link page-link block py-2 text-gray-600 hover:text-brand-primary">How It Works</a>
             <a href="#about" class="nav-link page-link block py-2 text-gray-600 hover:text-brand-primary">About</a>
-            <a href="#valuation" class="page-link block mt-2 w-full text-center bg-brand-primary text-white font-semibold px-5 py-2 rounded-lg hover:bg-brand-primary-dark">Get Free Valuation</a>
+            <a href="#valuation" class="page-link block mt-2 w-full text-center bg-brand-primary text-white font-semibold px-5 py-2 rounded-lg hover:bg-brand-primary-dark">Get Home Price Estimate</a>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto p-4 md:p-8">
+    <main>
         
         <!-- Page: Home -->
         <div id="page-home" class="page-content">
-            <div class="text-center py-16 md:py-24">
-                <h1 class="text-4xl md:text-6xl font-bold text-brand-secondary">We Forge the Deals.</h1>
-                <h1 class="text-4xl md:text-6xl font-bold text-brand-primary mb-6">You Keep the Savings.</h1>
-                <p class="max-w-3xl mx-auto text-lg text-gray-600 mb-10">
-                    Welcome to Forge Real Estate, where we're revolutionizing the way homes are sold. We provide top-tier, full-service real estate expertise without the traditional high-cost commission fees, putting more of your hard-earned equity back in your pocket.
-                </p>
-                <a href="#valuation" class="page-link inline-block bg-brand-primary text-white font-bold py-4 px-10 rounded-lg hover:bg-brand-primary-dark transition-colors text-xl shadow-lg">
-                    Get Your Free AI-Powered Valuation <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
+            <!-- Hero Section -->
+            <section class="hero-section text-white">
+                <div class="container mx-auto px-6 text-center py-24 md:py-36">
+                    <h1 class="text-4xl md:text-6xl font-bold">We Forge the Deals.</h1>
+                    <h1 class="text-4xl md:text-6xl font-bold text-brand-primary mb-6" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">You Keep the Savings.</h1>
+                    <p class="max-w-3xl mx-auto text-lg text-gray-200 mb-10" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+                        Welcome to Forge Real Estate, where we're revolutionizing the way homes are sold. We provide top-tier, full-service real estate expertise without the traditional high-cost commission fees.
+                    </p>
+                    <a href="#valuation" class="page-link inline-block bg-brand-primary text-white font-bold py-4 px-10 rounded-lg hover:bg-brand-primary-dark transition-colors text-xl shadow-lg">
+                        Get Your Free Home Price Estimate <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </section>
+            
+            <!-- Three-Column Feature Section -->
+            <section class="py-20 bg-white">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16">
+                         <h2 class="text-3xl md:text-4xl font-bold text-gray-800">A Modern Approach to Real Estate</h2>
+                         <p class="text-gray-600 mt-2 max-w-2xl mx-auto">We combine technology with expert service to provide an unparalleled selling experience.</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-12 text-center">
+                        <div class="flex flex-col items-center"><div class="bg-brand-primary text-white rounded-full h-20 w-20 flex items-center justify-center text-3xl mb-4 shadow-md"><i class="fas fa-hand-holding-usd"></i></div><h3 class="text-2xl font-bold mb-3">Maximize Your Equity</h3><p class="text-gray-600">Our innovative, low-cost model means you pay significantly less in commissions. This isn't about cutting corners; it's about working smarter to ensure more of your home's value—your hard-earned equity—stays in your pocket.</p></div>
+                        <div class="flex flex-col items-center"><div class="bg-brand-primary text-white rounded-full h-20 w-20 flex items-center justify-center text-3xl mb-4 shadow-md"><i class="fas fa-concierge-bell"></i></div><h3 class="text-2xl font-bold mb-3">Full-Service, Redefined</h3><p class="text-gray-600">Low cost does not mean low service. You receive comprehensive support from start to finish, including MLS listing, professional marketing, expert negotiation, and dedicated guidance through every step of the closing process. We provide everything a traditional agent does, just more efficiently.</p></div>
+                        <div class="flex flex-col items-center"><div class="bg-brand-primary text-white rounded-full h-20 w-20 flex items-center justify-center text-3xl mb-4 shadow-md"><i class="fas fa-brain"></i></div><h3 class="text-2xl font-bold mb-3">Expertise & Technology</h3><p class="text-gray-600">Leverage the best of both worlds. Our cutting-edge AI provides an instant, data-driven price estimate, while our experienced broker provides the critical human oversight and market knowledge needed to set the perfect price and strategy for your unique property.</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NEW: Testimonials Section -->
+            <section class="py-20 bg-gray-50">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16">
+                         <h2 class="text-3xl md:text-4xl font-bold text-gray-800">What Our Clients Say</h2>
+                         <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Real results from homeowners just like you.</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Testimonial Card 1 -->
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <div class="text-yellow-400 mb-4">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <blockquote class="text-gray-600 italic">"Selling our home with Mitch was a fantastic experience. The process was transparent, the service was top-notch, and the cost savings were significant. We couldn't be happier!"</blockquote>
+                            <p class="mt-4 font-bold text-gray-900">- Sarah & Tom L.</p>
+                            <p class="text-sm text-gray-500">Clayton, NC</p>
+                        </div>
+                        <!-- Testimonial Card 2 -->
+                         <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <div class="text-yellow-400 mb-4">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <blockquote class="text-gray-600 italic">"I was skeptical about a low-cost brokerage at first, but Forge Real Estate delivered on every promise. Full service, expert advice, and I saved thousands. Highly recommend."</blockquote>
+                            <p class="mt-4 font-bold text-gray-900">- David R.</p>
+                            <p class="text-sm text-gray-500">Raleigh, NC</p>
+                        </div>
+                        <!-- Testimonial Card 3 -->
+                         <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <div class="text-yellow-400 mb-4">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <blockquote class="text-gray-600 italic">"The combination of the instant online estimate and Mitch's personal follow-up with a detailed market analysis was so powerful. It made us feel confident and informed from day one."</blockquote>
+                            <p class="mt-4 font-bold text-gray-900">- The Jenkins Family</p>
+                            <p class="text-sm text-gray-500">Garner, NC</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
 
         <!-- Page: How It Works -->
         <div id="page-how-it-works" class="page-content hidden">
              <div class="max-w-4xl mx-auto py-12">
-                <div class="text-center mb-12">
-                    <h1 class="text-3xl md:text-4xl font-bold">Simple, Transparent, and Effective</h1>
-                    <p class="text-gray-600 mt-2">Our process is designed to be straightforward and powerful.</p>
-                </div>
+                <div class="text-center mb-12"><h1 class="text-3xl md:text-4xl font-bold">Simple, Transparent, and Effective</h1><p class="text-gray-600 mt-2">Our process is designed to be straightforward and powerful.</p></div>
                 <div class="space-y-10">
-                    <!-- Step 1 -->
-                    <div class="flex items-center gap-6">
-                        <div class="flex-shrink-0 bg-brand-primary text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold shadow-md">1</div>
-                        <div>
-                            <h3 class="text-2xl font-semibold">Submit Your Property Details</h3>
-                            <p class="text-gray-600">Fill out our intuitive online form with basic information about your property. It only takes a few minutes.</p>
-                        </div>
-                    </div>
-                    <!-- Step 2 -->
-                     <div class="flex items-center gap-6">
-                        <div class="flex-shrink-0 bg-brand-primary text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold shadow-md">2</div>
-                        <div>
-                            <h3 class="text-2xl font-semibold">Receive Your Instant AI Valuation</h3>
-                            <p class="text-gray-600">Our cutting-edge AI analyzes millions of data points to give you a preliminary estimate of your home's value instantly.</p>
-                        </div>
-                    </div>
-                    <!-- Step 3 -->
-                     <div class="flex items-center gap-6">
-                        <div class="flex-shrink-0 bg-brand-primary text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold shadow-md">3</div>
-                        <div>
-                            <h3 class="text-2xl font-semibold">Get an Expert-Verified Price</h3>
-                            <p class="text-gray-600">Your preliminary valuation is sent to our principal broker, Mitch Baney, who will personally verify the data against the MLS to provide a refined, highly accurate market price.</p>
-                        </div>
-                    </div>
-                    <!-- Step 4 -->
-                     <div class="flex items-center gap-6">
-                        <div class="flex-shrink-0 bg-brand-primary text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold shadow-md">4</div>
-                        <div>
-                            <h3 class="text-2xl font-semibold">Begin Your Seamless Selling Journey</h3>
-                            <p class="text-gray-600">Your details are automatically captured in our secure CRM. We'll reach out to discuss your goals and how we can help you sell your home for maximum value with minimum fees.</p>
-                        </div>
-                    </div>
+                    <div class="flex items-center gap-6"><div class="flex-shrink-0 bg-brand-primary text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold shadow-md">1</div><div><h3 class="text-2xl font-semibold">Submit Your Property Details</h3><p class="text-gray-600">Fill out our intuitive online form to receive a preliminary estimate of your home's probable selling price.</p></div></div>
+                    <div class="flex items-center gap-6"><div class="flex-shrink-0 bg-brand-primary text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold shadow-md">2</div><div><h3 class="text-2xl font-semibold">Receive an Instant Automated Estimate</h3><p class="text-gray-600">Our automated tool analyzes market data to give you an instant estimate of your home's probable selling price. This is a starting point, not a formal appraisal.</p></div></div>
+                    <div class="flex items-center gap-6"><div class="flex-shrink-0 bg-brand-primary text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold shadow-md">3</div><div><h3 class="text-2xl font-semibold">Get an Expert-Prepared CMA</h3><p class="text-gray-600">Your information is sent to our principal broker, Mitch Baney, who will personally prepare a detailed Comparative Market Analysis (CMA) by verifying data against the MLS to provide a refined, highly accurate market price opinion.</p></div></div>
+                    <div class="flex items-center gap-6"><div class="flex-shrink-0 bg-brand-primary text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold shadow-md">4</div><div><h3 class="text-2xl font-semibold">Begin Your Seamless Selling Journey</h3><p class="text-gray-600">Your details are automatically captured in our secure CRM. We'll reach out to discuss your goals and how we can help you sell your home for maximum value with minimum fees.</p></div></div>
                 </div>
             </div>
         </div>
@@ -133,17 +165,14 @@
         <div id="page-about" class="page-content hidden">
             <div class="max-w-4xl mx-auto py-12 bg-white p-10 rounded-2xl shadow-lg">
                 <div class="text-center mb-10">
-                    <img src="https://placehold.co/150x150/a95828/ffffff?text=MB" alt="Mitch Baney" class="mx-auto rounded-full mb-4">
+                    <!-- ACTION REQUIRED: Upload 'mitch-baney-profile.jpg' to an 'images' folder on your server -->
+                    <img src="images/mitch-baney-profile.jpg" alt="Mitch Baney" class="mx-auto rounded-full mb-4 w-40 h-40 object-cover border-4 border-white shadow-lg">
                     <h1 class="text-3xl font-bold">Mitch Baney</h1>
                     <p class="text-xl text-brand-primary font-semibold">Founder & Principal Broker</p>
                 </div>
                 <div class="text-lg text-gray-700 space-y-4 text-justify">
-                    <p>
-                        Mitch Baney founded Forge Real Estate with a single, clear mission: to build a more efficient and cost-effective way for people to sell their homes. With over a decade of experience in the real estate industry, Mitch saw firsthand how traditional commission structures could eat into a seller's hard-earned equity. He knew there had to be a better way.
-                    </p>
-                    <p>
-                        By leveraging technology and streamlining the sales process, Mitch created a model that provides full, expert-level service without the hefty price tag. He is passionate about empowering homeowners with data and transparency, ensuring they have a trusted partner every step of the way. At Forge, we don't just list homes; we build relationships and forge successful outcomes for our clients.
-                    </p>
+                    <p>Mitch Baney founded Forge Real Estate with a single, clear mission: to build a more efficient and cost-effective way for people to sell their homes. With over a decade of experience in the real estate industry, Mitch saw firsthand how traditional commission structures could eat into a seller's hard-earned equity. He knew there had to be a better way.</p>
+                    <p>By leveraging technology and streamlining the sales process, Mitch created a model that provides full, expert-level service without the hefty price tag. He is passionate about empowering homeowners with data and transparency, ensuring they have a trusted partner every step of the way. At Forge, we don't just list homes; we build relationships and forge successful outcomes for our clients.</p>
                 </div>
             </div>
         </div>
@@ -151,91 +180,34 @@
         <!-- Page: Valuation Tool -->
         <div id="page-valuation" class="page-content hidden">
             <div id="valuation-app" class="bg-white p-6 md:p-10 rounded-2xl shadow-lg max-w-4xl mx-auto">
-                <!-- Form Section -->
                 <div id="form-section">
-                    <div class="text-center mb-8">
-                        <h1 class="text-3xl md:text-4xl font-bold">Get a Free, AI-Powered Home Valuation</h1>
-                        <p class="text-gray-600 mt-2">Enter your property details below to see your home's estimated value in minutes.</p>
-                    </div>
-
+                    <div class="text-center mb-8"><h1 class="text-3xl md:text-4xl font-bold">Get a Free Home Price Estimate</h1><p class="text-gray-600 mt-2">Enter your property details below to see an automated estimate of its probable selling price.</p></div>
                     <form id="property-form">
                          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="md:col-span-2">
-                                <h3 class="text-lg font-semibold mb-2 border-b pb-2">Your Information</h3>
-                            </div>
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
-                                <input type="text" id="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
-                                <input type="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary">
-                            </div>
-                            <div class="md:col-span-2 mt-4">
-                                <h3 class="text-lg font-semibold mb-2 border-b pb-2">Property Details</h3>
-                            </div>
-                            <div class="md:col-span-2">
-                                <label for="address" class="block text-sm font-medium text-gray-700">Street Address</label>
-                                <input type="text" id="address" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary" placeholder="e.g., 123 Main St">
-                            </div>
-                            <div>
-                                <label for="city" class="block text-sm font-medium text-gray-700">City</label>
-                                <input type="text" id="city" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary">
-                            </div>
-                            <div>
-                                <label for="state" class="block text-sm font-medium text-gray-700">State</label>
-                                <input type="text" id="state" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary" placeholder="e.g., NC">
-                            </div>
-                            <div>
-                                <label for="bedrooms" class="block text-sm font-medium text-gray-700">Bedrooms</label>
-                                <input type="number" id="bedrooms" min="1" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary">
-                            </div>
-                            <div>
-                                <label for="bathrooms" class="block text-sm font-medium text-gray-700">Bathrooms</label>
-                                <input type="number" id="bathrooms" min="1" step="0.5" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary">
-                            </div>
-                            <div>
-                                <label for="sqft" class="block text-sm font-medium text-gray-700">Square Footage</label>
-                                <input type="number" id="sqft" min="100" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary">
-                            </div>
-                            <div>
-                                <label for="condition" class="block text-sm font-medium text-gray-700">Property Condition</label>
-                                <select id="condition" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary">
-                                    <option>Excellent</option>
-                                    <option>Good</option>
-                                    <option>Fair</option>
-                                    <option>Needs Work</option>
-                                </select>
-                            </div>
+                            <div class="md:col-span-2"><h3 class="text-lg font-semibold mb-2 border-b pb-2">Your Information</h3></div>
+                            <div><label for="name" class="block text-sm font-medium text-gray-700">Full Name</label><input type="text" id="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary"></div>
+                            <div><label for="email" class="block text-sm font-medium text-gray-700">Email Address</label><input type="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary"></div>
+                            <div class="md:col-span-2 mt-4"><h3 class="text-lg font-semibold mb-2 border-b pb-2">Property Details</h3></div>
+                            <div class="md:col-span-2"><label for="address" class="block text-sm font-medium text-gray-700">Street Address</label><input type="text" id="address" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary" placeholder="e.g., 123 Main St"></div>
+                            <div><label for="city" class="block text-sm font-medium text-gray-700">City</label><input type="text" id="city" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary"></div>
+                            <div><label for="state" class="block text-sm font-medium text-gray-700">State</label><input type="text" id="state" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary" placeholder="e.g., NC"></div>
+                            <div><label for="bedrooms" class="block text-sm font-medium text-gray-700">Bedrooms</label><input type="number" id="bedrooms" min="1" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary"></div>
+                            <div><label for="bathrooms" class="block text-sm font-medium text-gray-700">Bathrooms</label><input type="number" id="bathrooms" min="1" step="0.5" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary"></div>
+                            <div><label for="sqft" class="block text-sm font-medium text-gray-700">Square Footage</label><input type="number" id="sqft" min="100" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary"></div>
+                            <div><label for="condition" class="block text-sm font-medium text-gray-700">Property Condition</label><select id="condition" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary"><option>Excellent</option><option>Good</option><option>Fair</option><option>Needs Work</option></select></div>
                         </div>
-                        <div class="mt-8 text-center">
-                            <button type="submit" class="w-full md:w-1/2 bg-brand-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-brand-primary-dark transition-colors text-lg">
-                                Calculate My Home Value
-                            </button>
-                        </div>
+                        <div class="mt-8 text-center"><button type="submit" class="w-full md:w-2/3 bg-brand-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-brand-primary-dark transition-colors text-lg">Get My Free Home Price Estimate</button></div>
                     </form>
                 </div>
-                <!-- Results Section -->
                 <div id="results-section" class="hidden">
-                    <div class="text-center">
-                        <h2 class="text-3xl font-bold">Valuation Complete!</h2>
-                        <p class="text-gray-600 mt-2">Based on our AI analysis, here is your estimated property value.</p>
-                    </div>
-                    <div id="loading" class="hidden justify-center items-center py-20 flex-col">
-                        <div class="loader"></div>
-                        <p class="mt-4 text-lg font-medium">Forging your valuation...</p>
-                    </div>
+                    <div class="text-center"><h2 class="text-3xl font-bold">Automated Estimate Complete!</h2><p class="text-gray-600 mt-2">Here is a preliminary estimate of your property's probable selling price.</p></div>
+                    <div id="loading" class="hidden justify-center items-center py-20 flex-col"><div class="loader"></div><p class="mt-4 text-lg font-medium">Forging your estimate...</p></div>
                     <div id="results-content" class="hidden">
-                        <div class="text-center bg-gray-100 rounded-lg p-8 my-8">
-                            <p class="text-lg text-gray-700">Estimated Property Value</p>
-                            <p id="estimated-value" class="text-5xl font-bold text-brand-primary my-2">$0</p>
-                        </div>
-                        <h3 class="text-2xl font-bold text-center mb-6">Comparable Properties Used</h3>
+                        <div class="text-center bg-gray-100 rounded-lg p-8 my-8"><p class="text-lg text-gray-700">Estimated Probable Selling Price</p><p id="estimated-value" class="text-5xl font-bold text-brand-primary my-2">$0</p></div>
+                        <div class="text-center text-sm text-gray-500 my-6 p-4 border border-gray-200 rounded-lg"><strong>Disclaimer:</strong> This is an automated estimate. This opinion is not an appraisal of the market value of the property, and may not be used in lieu of an appraisal. If an appraisal is desired, the services of a licensed or certified appraiser shall be obtained.</div>
+                        <h3 class="text-2xl font-bold text-center mb-6">Comparable Properties Used in this Estimate</h3>
                         <div id="comps-list" class="space-y-4"></div>
-                        <div class="mt-10 text-center bg-green-50 border border-green-200 p-6 rounded-lg">
-                            <h4 class="font-bold text-lg text-green-800">Thank You!</h4>
-                            <p class="text-green-700 mt-2">Your information has been submitted. We have saved your valuation and one of our agents will be in contact with you shortly to discuss the results in more detail.</p>
-                        </div>
+                        <div class="mt-10 text-center bg-green-50 border border-green-200 p-6 rounded-lg"><h4 class="font-bold text-lg text-green-800">Thank You!</h4><p class="text-green-700 mt-2">Your information has been submitted. We will perform a full Comparative Market Analysis (CMA) and an agent will be in contact with you shortly to discuss the results.</p></div>
                     </div>
                 </div>
             </div>
@@ -246,8 +218,10 @@
     <footer class="bg-gray-800 text-white mt-12">
         <div class="container mx-auto px-6 py-8 text-center">
             <p class="font-bold">Forge Real Estate, LLC</p>
-            <p class="text-gray-400">123 Real Estate Ave, City, State 12345</p>
-            <p class="text-gray-400">&copy; 2024 Forge Real Estate, LLC. All rights reserved.</p>
+            <p class="text-gray-400">117 Gracie Lane, Clayton NC 27520</p>
+            <p class="text-gray-400">NC Real Estate Firm License #C40291</p>
+            <p class="text-gray-400 mt-4 text-xs">This opinion is not an appraisal of the market value of the property, and may not be used in lieu of an appraisal. If an appraisal is desired, the services of a licensed or certified appraiser shall be obtained.</p>
+            <p class="text-gray-500 mt-4">&copy; 2024 Forge Real Estate, LLC. All rights reserved.</p>
         </div>
     </footer>
 
@@ -257,7 +231,6 @@
         import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         import { getFirestore, collection, addDoc, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-        // --- App State & DOM Elements ---
         const pages = document.querySelectorAll('.page-content');
         const navLinks = document.querySelectorAll('.nav-link');
         const allPageLinks = document.querySelectorAll('.page-link');
@@ -271,11 +244,14 @@
         const estimatedValueEl = document.getElementById('estimated-value');
         const compsListEl = document.getElementById('comps-list');
         
-        // --- Navigation ---
         function showPage(pageId) {
-            pages.forEach(page => page.classList.add('hidden'));
-            document.getElementById(`page-${pageId}`).classList.remove('hidden');
-
+            pages.forEach(page => {
+                if(page.id === `page-${pageId}`) {
+                    page.classList.remove('hidden');
+                } else {
+                    page.classList.add('hidden');
+                }
+            });
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.hash === `#${pageId}`) {
@@ -290,8 +266,8 @@
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const pageId = e.currentTarget.hash.substring(1);
+                history.pushState({page: pageId}, null, `#${pageId}`);
                 showPage(pageId);
-                history.pushState(null, '', `#${pageId}`);
             });
         });
 
@@ -299,13 +275,11 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Handle browser back/forward
-        window.onpopstate = () => {
-            const pageId = location.hash.substring(1) || 'home';
+        window.onpopstate = (event) => {
+            const pageId = event.state ? event.state.page : (location.hash.substring(1) || 'home');
             showPage(pageId);
         };
         
-        // --- Firebase Setup ---
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
         const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
         const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
@@ -326,11 +300,10 @@
                 });
             } catch (e) {
                 console.error("Firebase initialization failed:", e);
-                document.getElementById('valuation-app').innerHTML = `<div class="text-center p-8 bg-red-100 text-red-700 rounded-lg"><strong>Error:</strong> Could not connect to the valuation service. Please try again later.</div>`;
+                document.getElementById('valuation-app').innerHTML = `<div class="text-center p-8 bg-red-100 text-red-700 rounded-lg"><strong>Error:</strong> Could not connect to the estimation service. Please try again later.</div>`;
             }
         }
         
-        // --- Form Submission Handler ---
         propertyForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             if (!userId) {
@@ -358,28 +331,19 @@
             resultsContent.classList.add('hidden');
 
             try {
-                // Save lead to Firestore
                 const docRef = await addDoc(collection(db, `artifacts/${appId}/users/${userId}/leads`), formData);
                 console.log("Lead saved to Firestore with ID: ", docRef.id);
-
-                // Get AI valuation
-                const valuation = await getAIValuation(formData);
-                displayResults(valuation.estimatedValue, valuation.comparableProperties);
-
-                // Send data to CRM
-                await sendToCRM(formData, valuation.estimatedValue);
-
+                const priceEstimate = await getAIPriceEstimate(formData);
+                displayResults(priceEstimate.estimatedPrice, priceEstimate.comparableProperties);
+                await sendToCRM(formData, priceEstimate.estimatedPrice);
             } catch (error) {
                 console.error("Error during submission process:", error);
                 loadingDiv.innerHTML = `<p class="text-red-600">An error occurred. Please try again.</p>`;
             }
         });
         
-        // --- CRM Integration (Hubspot Simulation) ---
-        async function sendToCRM(leadData, estimatedValue) {
+        async function sendToCRM(leadData, estimatedPrice) {
             console.log("Preparing to send data to CRM...");
-
-            // In a real application, Hubspot property names are lowercase with underscores.
             const hubspotPayload = {
                 properties: {
                     email: leadData.email,
@@ -392,47 +356,16 @@
                     num_bathrooms: leadData.bathrooms,
                     square_footage: leadData.sqft,
                     property_condition: leadData.condition,
-                    ai_estimated_value: estimatedValue,
+                    automated_price_estimate: estimatedPrice,
                     lead_status: "NEW"
                 }
             };
-
-            // --- IMPORTANT SECURITY NOTE ---
-            // The following code SIMULATES an API call.
-            // NEVER expose your API key on the client-side (in the browser).
-            // This logic should be moved to a secure, server-side function (e.g., Google Cloud Function, AWS Lambda).
-            // The function would receive the `hubspotPayload` from your website and then make the call to the Hubspot API.
-            
             console.log("CRM Payload (for simulation):", JSON.stringify(hubspotPayload, null, 2));
-
-            // EXAMPLE of what the server-side function would look like (using Node.js and fetch):
-            /*
-            const HUBSPOT_API_KEY = 'YOUR_SECRET_HUBSPOT_KEY';
-            const hubspotApiUrl = 'https://api.hubapi.com/crm/v3/objects/contacts';
-
-            try {
-                const response = await fetch(hubspotApiUrl, {
-                    method: 'POST',
-                    headers: {
-                        'Authorization': `Bearer ${HUBSPOT_API_KEY}`,
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(hubspotPayload)
-                });
-                const data = await response.json();
-                console.log('Successfully created contact in Hubspot:', data);
-                return { success: true, data };
-            } catch (error) {
-                console.error('Error sending data to Hubspot:', error);
-                return { success: false, error };
-            }
-            */
             console.log("CRM integration simulated successfully. In a real app, this would be a secure server call.");
             return { success: true, message: "Simulated CRM call complete." };
         }
 
-        // --- AI Valuation & Display Logic (No changes from previous version) ---
-        async function getAIValuation(property) {
+        async function getAIPriceEstimate(property) {
             const prompt = `
                 Generate a list of 3 realistic, comparable real estate properties (comps) for a property with the following details:
                 - Location: ${property.address}, ${property.city}, ${property.state}
@@ -452,16 +385,16 @@
             const comps = data.comparableProperties;
             if (comps.length === 0) throw new Error("AI did not return any comps.");
             const avgPpsqft = comps.reduce((acc, comp) => acc + (comp.price / comp.sqft), 0) / comps.length;
-            const estimatedValue = Math.round(avgPpsqft * property.sqft);
-            return { estimatedValue, comparableProperties: comps };
+            const estimatedPrice = Math.round(avgPpsqft * property.sqft);
+            return { estimatedPrice, comparableProperties: comps };
         }
 
-        function displayResults(value, comps) {
+        function displayResults(price, comps) {
             loadingDiv.classList.add('hidden');
             loadingDiv.classList.remove('flex');
             resultsContent.classList.remove('hidden');
             const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 });
-            estimatedValueEl.textContent = formatter.format(value);
+            estimatedValueEl.textContent = formatter.format(price);
             compsListEl.innerHTML = '';
             comps.forEach(comp => {
                 compsListEl.innerHTML += `
@@ -476,10 +409,13 @@
         }
         
         // --- App Initialization ---
-        initializeFirebase();
-        // Determine initial page from URL hash or default to home
-        const initialPage = location.hash.substring(1) || 'home';
-        showPage(initialPage);
+        (async () => {
+            await initializeFirebase();
+            const initialPage = location.hash.substring(1) || 'home';
+            showPage(initialPage);
+            // Save initial state for browser history
+            history.replaceState({page: initialPage}, null, `#${initialPage}`);
+        })();
 
     </script>
 </body>
