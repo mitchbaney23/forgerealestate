@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forge Real Estate - We Forge the Deals, You Keep the Savings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5F2EF;
+        }
+        /* Brand colors from the logo */
+        .bg-brand-primary { background-color: #a95828; }
+        .hover\:bg-brand-primary-dark:hover { background-color: #8c4720; }
+        .text-brand-primary { color: #a95828; }
+        .border-brand-primary { border-color: #a95828; }
+        .focus\:ring-brand-primary:focus { --tw-ring-color: #a95828; }
+        .text-brand-secondary { color: #3a3a3a; }
+
+        /* Active nav link style */
+        .nav-link.active {
+            color: #a95828;
+            font-weight: 600;
+        }
+
+        /* Spinner for loading state */
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #a95828;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="page-link flex items-center space-x-4">
+                <img src="https://i.ibb.co/6n20y1d/FORGERELOGO-2.jpg" alt="Forge Real Estate, LLC Logo" class="h-16 w-auto" onerror="this.style.display='none';">
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link page-link text-gray-600 hover:text-brand-primary transition-colors active">Home</a>
+                <a href="#how-it-works" class="nav-link page-link text-gray-600 hover:text-brand-primary transition-colors">How It Works</a>
+                <a href="#about" class="nav-link page-link text-gray-600 hover:text-brand-primary transition-colors">About</a>
+                <a href="#valuation" class="page-link bg-brand-primary text-white font-semibold px-5 py-2 rounded-lg hover:bg-brand-primary-dark transition-colors">Get Free Valuation</a>
+            </div>
+            <button class="md:hidden" id="mobile-menu-button">
+                <i class="fas fa-bars text-gray-600 text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 border-t">
+            <a href="#home" class="nav-link page-link block py-2 text-gray-600 hover:text-brand-primary">Home</a>
+            <a href="#how-it-works" class="nav-link page-link block py-2 text-gray-600 hover:text-brand-primary">How It Works</a>
+            <a href="#about" class="nav-link page-link block py-2 text-gray-600 hover:text-brand-primary">About</a>
+            <a href="#valuation" class="page-link block mt-2 w-full text-center bg-brand-primary text-white font-semibold px-5 py-2 rounded-lg hover:bg-brand-primary-dark">Get Free Valuation</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <!-- Page: Home -->
+        <div id="page-home" class="page-content">
+            <div class="text-center py-16 md:py-24">
+                <h1 class="text-4xl md:text-6xl font-bold text-brand-secondary">We Forge the Deals.</h1>
+                <h1 class="text-4xl md:text-6xl font-bold text-brand-primary mb-6">You Keep the Savings.</h1>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600 mb-10">
+                    Welcome to Forge Real Estate, where we're revolutionizing the way homes are sold. We provide top-tier, full-service real estate expertise without the traditional high-cost commission fees, putting more of your hard-earned equity back in your pocket.
+                </p>
+                <a href="#valuation" class="page-link inline-block bg-brand-primary text-white font-bold py-4 px-10 rounded-lg hover:bg-brand-primary-dark transition-colors text-xl shadow-lg">
+                    Get Your Free AI-Powered Valuation <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Page: How It Works -->
+        <div id="page-how-it-works" class="page-content hidden">
+             <div class="max-w-4xl mx-auto py-12">
+                <div class="text-center mb-12">
+                    <h1 class="text-3xl md:text-4xl font-bold">Simple, Transparent, and Effective</h1>
+                    <p class="text-gray-600 mt-2">Our process is designed to be straightforward and powerful.</p>
+                </div>
+                <div class="space-y-10">
+                    <!-- Step 1 -->
+                    <div class="flex items-center gap-6">
+                        <div class="flex-shrink-0 bg-brand-primary text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold shadow-md">1</div>
+                        <div>
+                            <h3 class="text-2xl font-semibold">Submit Your Property Details</h3>
+                            <p class="text-gray-600">Fill out our intuitive online form with basic information about your property. It only takes a few minutes.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                     <div class="flex items-center gap-6">
+                        <div class="flex-shrink-0 bg-brand-primary text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold shadow-md">2</div>
+                        <div>
+                            <h3 class="text-2xl font-semibold">Receive Your Instant AI Valuation</h3>
+                            <p class="text-gray-600">Our cutting-edge AI analyzes millions of data points to give you a preliminary estimate of your home's value instantly.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                     <div class="flex items-center gap-6">
+                        <div class="flex-shrink-0 bg-brand-primary text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold shadow-md">3</div>
+                        <div>
+                            <h3 class="text-2xl font-semibold">Get an Expert-Verified Price</h3>
+                            <p class="text-gray-600">Your preliminary valuation is sent to our principal broker, Mitch Baney, who will personally verify the data against the MLS to provide a refined, highly accurate market price.</p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                     <div class="flex items-center gap-6">
+                        <div class="flex-shrink-0 bg-brand-primary text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold shadow-md">4</div>
+                        <div>
+                            <h3 class="text-2xl font-semibold">Begin Your Seamless Selling Journey</h3>
+                            <p class="text-gray-600">Your details are automatically captured in our secure CRM. We'll reach out to discuss your goals and how we can help you sell your home for maximum value with minimum fees.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page: About -->
+        <div id="page-about" class="page-content hidden">
+            <div class="max-w-4xl mx-auto py-12 bg-white p-10 rounded-2xl shadow-lg">
+                <div class="text-center mb-10">
+                    <img src="https://placehold.co/150x150/a95828/ffffff?text=MB" alt="Mitch Baney" class="mx-auto rounded-full mb-4">
+                    <h1 class="text-3xl font-bold">Mitch Baney</h1>
+                    <p class="text-xl text-brand-primary font-semibold">Founder & Principal Broker</p>
+                </div>
+                <div class="text-lg text-gray-700 space-y-4 text-justify">
+                    <p>
+                        Mitch Baney founded Forge Real Estate with a single, clear mission: to build a more efficient and cost-effective way for people to sell their homes. With over a decade of experience in the real estate industry, Mitch saw firsthand how traditional commission structures could eat into a seller's hard-earned equity. He knew there had to be a better way.
+                    </p>
+                    <p>
+                        By leveraging technology and streamlining the sales process, Mitch created a model that provides full, expert-level service without the hefty price tag. He is passionate about empowering homeowners with data and transparency, ensuring they have a trusted partner every step of the way. At Forge, we don't just list homes; we build relationships and forge successful outcomes for our clients.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page: Valuation Tool -->
+        <div id="page-valuation" class="page-content hidden">
+            <div id="valuation-app" class="bg-white p-6 md:p-10 rounded-2xl shadow-lg max-w-4xl mx-auto">
+                <!-- Form Section -->
+                <div id="form-section">
+                    <div class="text-center mb-8">
+                        <h1 class="text-3xl md:text-4xl font-bold">Get a Free, AI-Powered Home Valuation</h1>
+                        <p class="text-gray-600 mt-2">Enter your property details below to see your home's estimated value in minutes.</p>
+                    </div>
+
+                    <form id="property-form">
+                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="md:col-span-2">
+                                <h3 class="text-lg font-semibold mb-2 border-b pb-2">Your Information</h3>
+                            </div>
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                <input type="text" id="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                <input type="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary">
+                            </div>
+                            <div class="md:col-span-2 mt-4">
+                                <h3 class="text-lg font-semibold mb-2 border-b pb-2">Property Details</h3>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="address" class="block text-sm font-medium text-gray-700">Street Address</label>
+                                <input type="text" id="address" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary" placeholder="e.g., 123 Main St">
+                            </div>
+                            <div>
+                                <label for="city" class="block text-sm font-medium text-gray-700">City</label>
+                                <input type="text" id="city" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary">
+                            </div>
+                            <div>
+                                <label for="state" class="block text-sm font-medium text-gray-700">State</label>
+                                <input type="text" id="state" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary" placeholder="e.g., NC">
+                            </div>
+                            <div>
+                                <label for="bedrooms" class="block text-sm font-medium text-gray-700">Bedrooms</label>
+                                <input type="number" id="bedrooms" min="1" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary">
+                            </div>
+                            <div>
+                                <label for="bathrooms" class="block text-sm font-medium text-gray-700">Bathrooms</label>
+                                <input type="number" id="bathrooms" min="1" step="0.5" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary">
+                            </div>
+                            <div>
+                                <label for="sqft" class="block text-sm font-medium text-gray-700">Square Footage</label>
+                                <input type="number" id="sqft" min="100" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary">
+                            </div>
+                            <div>
+                                <label for="condition" class="block text-sm font-medium text-gray-700">Property Condition</label>
+                                <select id="condition" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary">
+                                    <option>Excellent</option>
+                                    <option>Good</option>
+                                    <option>Fair</option>
+                                    <option>Needs Work</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-8 text-center">
+                            <button type="submit" class="w-full md:w-1/2 bg-brand-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-brand-primary-dark transition-colors text-lg">
+                                Calculate My Home Value
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Results Section -->
+                <div id="results-section" class="hidden">
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold">Valuation Complete!</h2>
+                        <p class="text-gray-600 mt-2">Based on our AI analysis, here is your estimated property value.</p>
+                    </div>
+                    <div id="loading" class="hidden justify-center items-center py-20 flex-col">
+                        <div class="loader"></div>
+                        <p class="mt-4 text-lg font-medium">Forging your valuation...</p>
+                    </div>
+                    <div id="results-content" class="hidden">
+                        <div class="text-center bg-gray-100 rounded-lg p-8 my-8">
+                            <p class="text-lg text-gray-700">Estimated Property Value</p>
+                            <p id="estimated-value" class="text-5xl font-bold text-brand-primary my-2">$0</p>
+                        </div>
+                        <h3 class="text-2xl font-bold text-center mb-6">Comparable Properties Used</h3>
+                        <div id="comps-list" class="space-y-4"></div>
+                        <div class="mt-10 text-center bg-green-50 border border-green-200 p-6 rounded-lg">
+                            <h4 class="font-bold text-lg text-green-800">Thank You!</h4>
+                            <p class="text-green-700 mt-2">Your information has been submitted. We have saved your valuation and one of our agents will be in contact with you shortly to discuss the results in more detail.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p class="font-bold">Forge Real Estate, LLC</p>
+            <p class="text-gray-400">123 Real Estate Ave, City, State 12345</p>
+            <p class="text-gray-400">&copy; 2024 Forge Real Estate, LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase and App Logic -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // --- App State & DOM Elements ---
+        const pages = document.querySelectorAll('.page-content');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const allPageLinks = document.querySelectorAll('.page-link');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const formSection = document.getElementById('form-section');
+        const resultsSection = document.getElementById('results-section');
+        const propertyForm = document.getElementById('property-form');
+        const loadingDiv = document.getElementById('loading');
+        const resultsContent = document.getElementById('results-content');
+        const estimatedValueEl = document.getElementById('estimated-value');
+        const compsListEl = document.getElementById('comps-list');
+        
+        // --- Navigation ---
+        function showPage(pageId) {
+            pages.forEach(page => page.classList.add('hidden'));
+            document.getElementById(`page-${pageId}`).classList.remove('hidden');
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.hash === `#${pageId}`) {
+                    link.classList.add('active');
+                }
+            });
+            window.scrollTo(0, 0);
+            mobileMenu.classList.add('hidden');
+        }
+
+        allPageLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const pageId = e.currentTarget.hash.substring(1);
+                showPage(pageId);
+                history.pushState(null, '', `#${pageId}`);
+            });
+        });
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Handle browser back/forward
+        window.onpopstate = () => {
+            const pageId = location.hash.substring(1) || 'home';
+            showPage(pageId);
+        };
+        
+        // --- Firebase Setup ---
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+        let app, auth, db, userId;
+
+        async function initializeFirebase() {
+            try {
+                app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+                setLogLevel('debug');
+                onAuthStateChanged(auth, async (user) => {
+                    if (user) {
+                        userId = user.uid;
+                    } else {
+                        await (initialAuthToken ? signInWithCustomToken(auth, initialAuthToken) : signInAnonymously(auth));
+                    }
+                });
+            } catch (e) {
+                console.error("Firebase initialization failed:", e);
+                document.getElementById('valuation-app').innerHTML = `<div class="text-center p-8 bg-red-100 text-red-700 rounded-lg"><strong>Error:</strong> Could not connect to the valuation service. Please try again later.</div>`;
+            }
+        }
+        
+        // --- Form Submission Handler ---
+        propertyForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (!userId) {
+                alert("Authentication not ready. Please wait a moment and try again.");
+                return;
+            }
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                address: document.getElementById('address').value,
+                city: document.getElementById('city').value,
+                state: document.getElementById('state').value,
+                bedrooms: parseFloat(document.getElementById('bedrooms').value),
+                bathrooms: parseFloat(document.getElementById('bathrooms').value),
+                sqft: parseInt(document.getElementById('sqft').value),
+                condition: document.getElementById('condition').value,
+                createdAt: new Date().toISOString()
+            };
+            
+            formSection.classList.add('hidden');
+            resultsSection.classList.remove('hidden');
+            loadingDiv.classList.remove('hidden');
+            loadingDiv.classList.add('flex');
+            resultsContent.classList.add('hidden');
+
+            try {
+                // Save lead to Firestore
+                const docRef = await addDoc(collection(db, `artifacts/${appId}/users/${userId}/leads`), formData);
+                console.log("Lead saved to Firestore with ID: ", docRef.id);
+
+                // Get AI valuation
+                const valuation = await getAIValuation(formData);
+                displayResults(valuation.estimatedValue, valuation.comparableProperties);
+
+                // Send data to CRM
+                await sendToCRM(formData, valuation.estimatedValue);
+
+            } catch (error) {
+                console.error("Error during submission process:", error);
+                loadingDiv.innerHTML = `<p class="text-red-600">An error occurred. Please try again.</p>`;
+            }
+        });
+        
+        // --- CRM Integration (Hubspot Simulation) ---
+        async function sendToCRM(leadData, estimatedValue) {
+            console.log("Preparing to send data to CRM...");
+
+            // In a real application, Hubspot property names are lowercase with underscores.
+            const hubspotPayload = {
+                properties: {
+                    email: leadData.email,
+                    firstname: leadData.name.split(' ')[0],
+                    lastname: leadData.name.split(' ').slice(1).join(' '),
+                    address: `${leadData.address}, ${leadData.city}, ${leadData.state}`,
+                    city: leadData.city,
+                    state: leadData.state,
+                    num_bedrooms: leadData.bedrooms,
+                    num_bathrooms: leadData.bathrooms,
+                    square_footage: leadData.sqft,
+                    property_condition: leadData.condition,
+                    ai_estimated_value: estimatedValue,
+                    lead_status: "NEW"
+                }
+            };
+
+            // --- IMPORTANT SECURITY NOTE ---
+            // The following code SIMULATES an API call.
+            // NEVER expose your API key on the client-side (in the browser).
+            // This logic should be moved to a secure, server-side function (e.g., Google Cloud Function, AWS Lambda).
+            // The function would receive the `hubspotPayload` from your website and then make the call to the Hubspot API.
+            
+            console.log("CRM Payload (for simulation):", JSON.stringify(hubspotPayload, null, 2));
+
+            // EXAMPLE of what the server-side function would look like (using Node.js and fetch):
+            /*
+            const HUBSPOT_API_KEY = 'YOUR_SECRET_HUBSPOT_KEY';
+            const hubspotApiUrl = 'https://api.hubapi.com/crm/v3/objects/contacts';
+
+            try {
+                const response = await fetch(hubspotApiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${HUBSPOT_API_KEY}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(hubspotPayload)
+                });
+                const data = await response.json();
+                console.log('Successfully created contact in Hubspot:', data);
+                return { success: true, data };
+            } catch (error) {
+                console.error('Error sending data to Hubspot:', error);
+                return { success: false, error };
+            }
+            */
+            console.log("CRM integration simulated successfully. In a real app, this would be a secure server call.");
+            return { success: true, message: "Simulated CRM call complete." };
+        }
+
+        // --- AI Valuation & Display Logic (No changes from previous version) ---
+        async function getAIValuation(property) {
+            const prompt = `
+                Generate a list of 3 realistic, comparable real estate properties (comps) for a property with the following details:
+                - Location: ${property.address}, ${property.city}, ${property.state}
+                - Specs: ${property.bedrooms} beds, ${property.bathrooms} baths, ${property.sqft} sqft
+                - Condition: ${property.condition}
+                The comps should be in the same city and be similar in size and bed/bath count. Provide a realistic market sale price for each comp.
+            `;
+            const schema = { type: "OBJECT", properties: { "comparableProperties": { type: "ARRAY", items: { type: "OBJECT", properties: { "address": { "type": "STRING" }, "price": { "type": "NUMBER" }, "sqft": { "type": "NUMBER" }, "beds": { "type": "NUMBER" }, "baths": { "type": "NUMBER" } }, required: ["address", "price", "sqft", "beds", "baths"] } } }, required: ["comparableProperties"] };
+            const payload = { contents: [{ role: "user", parts: [{ text: prompt }] }], generationConfig: { responseMimeType: "application/json", responseSchema: schema } };
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+            const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+            if (!response.ok) throw new Error(`API call failed with status: ${response.status}`);
+            const result = await response.json();
+            if (!result.candidates || !result.candidates[0].content.parts[0].text) throw new Error("Invalid response from AI.");
+            const data = JSON.parse(result.candidates[0].content.parts[0].text);
+            const comps = data.comparableProperties;
+            if (comps.length === 0) throw new Error("AI did not return any comps.");
+            const avgPpsqft = comps.reduce((acc, comp) => acc + (comp.price / comp.sqft), 0) / comps.length;
+            const estimatedValue = Math.round(avgPpsqft * property.sqft);
+            return { estimatedValue, comparableProperties: comps };
+        }
+
+        function displayResults(value, comps) {
+            loadingDiv.classList.add('hidden');
+            loadingDiv.classList.remove('flex');
+            resultsContent.classList.remove('hidden');
+            const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 });
+            estimatedValueEl.textContent = formatter.format(value);
+            compsListEl.innerHTML = '';
+            comps.forEach(comp => {
+                compsListEl.innerHTML += `
+                    <div class="bg-gray-50 border rounded-lg p-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                        <div class="flex-grow">
+                            <p class="font-bold">${comp.address}</p>
+                            <p class="text-sm text-gray-600">${comp.beds} beds | ${comp.baths} baths | ${comp.sqft.toLocaleString()} sqft</p>
+                        </div>
+                        <div class="text-lg font-semibold text-brand-primary whitespace-nowrap">${formatter.format(comp.price)}</div>
+                    </div>`;
+            });
+        }
+        
+        // --- App Initialization ---
+        initializeFirebase();
+        // Determine initial page from URL hash or default to home
+        const initialPage = location.hash.substring(1) || 'home';
+        showPage(initialPage);
+
+    </script>
+</body>
+</html>
