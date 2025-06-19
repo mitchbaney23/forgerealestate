@@ -375,28 +375,49 @@
             }
         });
         
-        async function sendToCRM(leadData, estimatedPrice) {
-            console.log("Preparing to send data to CRM...");
-            const hubspotPayload = {
-                properties: {
-                    email: leadData.email,
-                    firstname: leadData.name.split(' ')[0],
-                    lastname: leadData.name.split(' ').slice(1).join(' '),
-                    address: `${leadData.address}, ${leadData.city}, ${leadData.state}`,
-                    city: leadData.city,
-                    state: leadData.state,
-                    num_bedrooms: leadData.bedrooms,
-                    num_bathrooms: leadData.bathrooms,
-                    square_footage: leadData.sqft,
-                    property_condition: leadData.condition,
-                    automated_price_estimate: estimatedPrice,
-                    lead_status: "NEW"
-                }
-            };
-            console.log("CRM Payload (for simulation):", JSON.stringify(hubspotPayload, null, 2));
-            console.log("CRM integration simulated successfully. In a real app, this would be a secure server call.");
-            return { success: true, message: "Simulated CRM call complete." };
+       // --- CRM Integration ---
+async function sendToCRM(leadData, estimatedPrice) {
+    console.log("Sending data to secure CRM function...");
+
+    // This is the data we will send to our secure function.
+    const payload = {
+        email: leadData.email,
+        firstname: leadData.name.split(' ')[0],
+        lastname: leadData.name.split(' ').slice(1).join(' '),
+        address: `${leadData.address}, ${leadData.city}, ${leadData.state}`,
+        city: leadData.city,
+        state: leadData.state,
+        bedrooms: leadData.bedrooms,
+        bathrooms: leadData.bathrooms,
+        sqft: leadData.sqft,
+        condition: leadData.condition,
+        estimatedPrice: estimatedPrice
+    };
+
+    try {
+        // The URL for our function. Netlify automatically creates this.
+        const functionUrl = '/.netlify/functions/add-contact'; 
+
+        const response = await fetch(functionUrl, {
+            method: 'POST',
+            body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+            throw new Error(`Server function failed: ${response.status}`);
         }
+
+        const result = await response.json();
+        console.log('Successfully called CRM function:', result);
+        return { success: true };
+
+    } catch (error) {
+        console.error('Error calling CRM function:', error);
+        // We can let the user know something went wrong if we want,
+        // but for now, we'll just log it.
+        return { success: false };
+    }
+}
 
         async function getAIPriceEstimate(property) {
             const prompt = `
