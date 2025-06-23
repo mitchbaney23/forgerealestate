@@ -12,10 +12,10 @@ exports.handler = async function(event) {
   try {
     // --- Step 1: Get the AI Price Estimate ---
     const aiEstimate = await getAIPriceEstimate(property, GOOGLE_AI_API_KEY);
-
+    
     // --- Step 2: Add the contact to HubSpot ---
     await addContactToHubspot(property, aiEstimate, HUBSPOT_API_KEY);
-
+    
     // --- Step 3: Return the successful estimate to the website ---
     return {
       statusCode: 200,
