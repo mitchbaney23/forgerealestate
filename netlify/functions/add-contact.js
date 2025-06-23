@@ -1,22 +1,40 @@
 // This is the code for your secure serverless function.
-// It will now handle BOTH the AI estimate and the HubSpot submission.
+// It will now handle the AI estimate, save to Firestore, and create the HubSpot contact.
+
+const { initializeApp, cert, getApps } = require('firebase-admin/app');
+const { getFirestore } = require('firebase-admin/firestore');
+const fetch = require('node-fetch'); // Netlify functions use a slightly different way to fetch
 
 exports.handler = async function(event) {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
-  const property = JSON.parse(event.body);
-  const { GOOGLE_AI_API_KEY, HUBSPOT_API_KEY } = process.env;
+  const propertyData = JSON.parse(event.body);
+  const { 
+    GOOGLE_AI_API_KEY, 
+    HUBSPOT_API_KEY,
+    FIREBASE_PROJECT_ID,
+    FIREBASE_CLIENT_EMAIL,
+    FIREBASE_PRIVATE_KEY
+  } = process.env;
 
   try {
     // --- Step 1: Get the AI Price Estimate ---
-    const aiEstimate = await getAIPriceEstimate(property, GOOGLE_AI_API_KEY);
+    const aiEstimate = await getAIPriceEstimate(propertyData, GOOGLE_AI_API_KEY);
     
-    // --- Step 2: Add the contact to HubSpot ---
-    await addContactToHubspot(property, aiEstimate, HUBSPOT_API_KEY);
+    // --- Step 2: Initialize Firebase Admin and save the lead ---
+    const firebaseCredentials = {
+      projectId: FIREBASE_PROJECT_ID,
+      clientEmail: FIREBASE_CLIENT_EMAIL,
+      privateKey: FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n')
+    };
+    await saveLeadToFirestore(propertyData, aiEstimate, firebaseCredentials);
+
+    // --- Step 3: Add the contact to HubSpot ---
+    await addContactToHubspot(propertyData, aiEstimate, HUBSPOT_API_KEY);
     
-    // --- Step 3: Return the successful estimate to the website ---
+    // --- Step 4: Return the successful estimate to the website ---
     return {
       statusCode: 200,
       body: JSON.stringify(aiEstimate)
@@ -30,6 +48,22 @@ exports.handler = async function(event) {
     };
   }
 };
+
+async function saveLeadToFirestore(leadData, estimate, firebaseCredentials) {
+    // Initialize Firebase Admin only if it hasn't been already.
+    if (!getApps().length) {
+        initializeApp({
+            credential: cert(firebaseCredentials),
+        });
+    }
+    
+    const db = getFirestore();
+    const leadWithEstimate = { ...leadData, ...estimate, createdAt: new Date() };
+
+    // This path is now secure and specific to your app
+    await db.collection('leads').add(leadWithEstimate);
+    console.log('Successfully saved lead to Firestore.');
+}
 
 async function getAIPriceEstimate(property, apiKey) {
     const prompt = `Act as a real estate market analyst. Based on the following property details, provide a single estimated market value, a low-end value, and a high-end value.
@@ -50,9 +84,8 @@ async function getAIPriceEstimate(property, apiKey) {
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
     const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-    if (!response.ok) throw new Error(`AI API call failed with status: ${response.status}`);
+    if (!response.ok) throw new Error(`AI API call failed: ${response.statusText}`);
     const result = await response.json();
-    if (!result.candidates || !result.candidates[0].content.parts[0].text) throw new Error("Invalid response from AI.");
     return JSON.parse(result.candidates[0].content.parts[0].text);
 }
 
@@ -63,27 +96,16 @@ async function addContactToHubspot(leadData, estimate, apiKey) {
           firstname: leadData.name.split(' ')[0],
           lastname: leadData.name.split(' ').slice(1).join(' '),
           address: `${leadData.address}, ${leadData.city}, ${leadData.state}`,
-          city: leadData.city,
-          state: leadData.state,
-          num_bedrooms: leadData.bedrooms,
-          num_bathrooms: leadData.bathrooms,
-          square_footage: leadData.sqft,
-          property_condition: leadData.condition,
           automated_price_estimate: estimate.estimatedValue,
           lead_status: "NEW"
         }
     };
-
     const hubspotApiUrl = 'https://api.hubapi.com/crm/v3/objects/contacts';
     const response = await fetch(hubspotApiUrl, {
         method: 'POST',
-        headers: {
-            'Authorization': `Bearer ${apiKey}`,
-            'Content-Type': 'application/json'
-        },
+        headers: { 'Authorization': `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
         body: JSON.stringify(hubspotPayload)
     });
-
     if (!response.ok) {
       const errorBody = await response.text();
       throw new Error(`HubSpot API Error: ${response.status} ${errorBody}`);
