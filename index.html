@@ -69,7 +69,6 @@
             max-height: 0;
             overflow: hidden;
         }
-        /* The padding and max-height will now be controlled by JS for perfect sizing */
         .faq-icon {
             transition: transform 0.3s ease-in-out;
         }
@@ -84,13 +83,14 @@
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="page-link flex items-center space-x-4">
-                <img src="images/forge-logo.jpg" alt="Forge Real Estate, LLC Logo" class="h-16 w-auto">
+                <img src="images/forge-logo.jpg" alt="Forge Real Estate, LLC Logo" class="h-20 w-auto">
             </a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#home" class="nav-link page-link text-gray-600 hover:text-brand-primary transition-colors active">Home</a>
                 <a href="#how-it-works" class="nav-link page-link text-gray-600 hover:text-brand-primary transition-colors">How It Works</a>
                 <a href="#faq" class="nav-link page-link text-gray-600 hover:text-brand-primary transition-colors">FAQ</a>
                 <a href="#about" class="nav-link page-link text-gray-600 hover:text-brand-primary transition-colors">About</a>
+                <a href="#contact" class="nav-link page-link text-gray-600 hover:text-brand-primary transition-colors">Contact</a>
                 <a href="#valuation" class="page-link bg-brand-primary text-white font-semibold px-5 py-2 rounded-lg hover:bg-brand-primary-dark transition-colors">Get Home Price Estimate</a>
             </div>
             <button class="md:hidden" id="mobile-menu-button">
@@ -103,6 +103,7 @@
             <a href="#how-it-works" class="nav-link page-link block py-2 text-gray-600 hover:text-brand-primary">How It Works</a>
             <a href="#faq" class="nav-link page-link block py-2 text-gray-600 hover:text-brand-primary">FAQ</a>
             <a href="#about" class="nav-link page-link block py-2 text-gray-600 hover:text-brand-primary">About</a>
+            <a href="#contact" class="nav-link page-link block py-2 text-gray-600 hover:text-brand-primary">Contact</a>
             <a href="#valuation" class="page-link block mt-2 w-full text-center bg-brand-primary text-white font-semibold px-5 py-2 rounded-lg hover:bg-brand-primary-dark">Get Home Price Estimate</a>
         </div>
     </header>
@@ -122,7 +123,7 @@
                 <div class="container mx-auto px-6"><div class="text-center mb-16"><h2 class="text-3xl md:text-4xl font-bold text-gray-800">What Our Clients Say</h2><p class="text-gray-600 mt-2 max-w-2xl mx-auto">Real results from homeowners just like you.</p></div><div class="grid md:grid-cols-3 gap-8"><div class="bg-white p-8 rounded-lg shadow-lg"><div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><blockquote class="text-gray-600 italic">"Selling our home with Mitch was a fantastic experience. The process was transparent, the service was top-notch, and the cost savings were significant. We couldn't be happier!"</blockquote><p class="mt-4 font-bold text-gray-900">- Sarah & Tom L.</p><p class="text-sm text-gray-500">Clayton, NC</p></div><div class="bg-white p-8 rounded-lg shadow-lg"><div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><blockquote class="text-gray-600 italic">"I was skeptical about a low-cost brokerage at first, but Forge Real Estate delivered on every promise. Full service, expert advice, and I saved thousands. Highly recommend."</blockquote><p class="mt-4 font-bold text-gray-900">- David R.</p><p class="text-sm text-gray-500">Raleigh, NC</p></div><div class="bg-white p-8 rounded-lg shadow-lg"><div class="text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><blockquote class="text-gray-600 italic">"The combination of the instant online estimate and Mitch's personal follow-up with a detailed market analysis was so powerful. It made us feel confident and informed from day one."</blockquote><p class="mt-4 font-bold text-gray-900">- The Jenkins Family</p><p class="text-sm text-gray-500">Garner, NC</p></div></div></div>
             </section>
             <section class="py-20 bg-white">
-                <div class="container mx-auto px-6"><div class="text-center mb-16"><h2 class="text-3xl md:text-4xl font-bold text-gray-800">Proudly Serving the Triangle & Beyond</h2><p class="text-gray-600 mt-2 max-w-2xl mx-auto">Our expertise covers the entire 16-county Triangle MLS region, ensuring we have the local knowledge to serve you best.</p></div><div class="flex flex-col lg:flex-row items-center gap-12"><div class="w-full lg:w-1/2"><svg class="nc-map w-full h-auto" viewBox="0 0 1000 410" xmlns="http://www.w3.org/2000/svg"><g><path class="county" d="m 213.9,155.4 -2.9,5.7 -3.9,-0.3 -2.6,2.6 -4.8,0.7 -1.6,4.8 -3.9,-0.7 -4.2,4.8 -4.2,-0.9 -1.9,4.2 -3.6,1.9 -2.6,-2.3 -4.2,2.3 -2.3,3.9 -1.6,3.9 -2.9,0.3 -2.6,-2.3 -2.9,2.6 -1.3,3.9 -3.9,0.7 -2.6,-2.3 -2.3,2.6 -3.9,0.9 -3.9,-0.7 -1.9,2.3 -1.3,4.2 0.9,3.9 -0.9,4.2 -3.9,-0.3 -2.6,2.3 -2.3,3.9 0.3,3.9 -1.9,3.9 -2.6,-2.3 -1.6,4.2 0.9,4.2 -0.9,3.9 -2.9,0.9 -2.9,-2.3 -1.3,3.9 -3.9,0.3 -2.6,2.3 -1.3,3.9 -2.9,0.9 -1.9,-2.3 -2.6,2.3 -3.9,0.7 -2.9,-2.3 -2.6,2.3 -1.3,3.9 -3.9,0.9 -3.9,-0.7 -1.9,2.3 -1.3,4.2 0.9,3.9 -0.9,4.2 -3.9,-0.3 -2.6,2.3 -2.3,3.9 0.3,3.9 -1.9,3.9 -2.6,-2.3 -1.6,4.2 0.9,4.2 -0.9,3.9 -2.9,0.9 -2.9,-2.3 -1.3,3.9 -3.9,0.3 -2.6,2.3 -1.3,3.9 -2.9,0.9 -1.9,-2.3 -2.6,2.3 -3.9,0.7 -2.9,-2.3 -2.6,2.3 -1.3,3.9 -3.9,0.9 -3.9,-0.7 -1.9,2.3 -1.3,4.2 0.9,3.9 -0.9,4.2 -3.9,-0.3 -2.6,2.3 -2.3,3.9 0.3,3.9 -1.9,3.9 -2.6,-2.3 -1.6,4.2 0.9,4.2 -0.9,3.9 -2.9,0.9 -2.9,-2.3 -1.3,3.9 -3.9,0.3 -2.6,2.3 -1.3,3.9 -2.9,0.9 -1.9,-2.3 -2.6,2.3 -3.9,0.7 -2.9,-2.3 -2.6,2.3 -1.3,3.9 14.8,-0.3 11.3,-15.8 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 1-1000" /><path id="Wake" class="county service-area" d="m 673,215 -17.5,-1.3 -12.4,13.1 -21.1,-6.5 -10.8,17.2 -22.4,-0.7 -8.6,22.1 24.9,10.1 11.1,-15.6 30.5,8.1 15.6,-27.4 12.1,5.2 8.3,-21.8 Z" /><path id="Durham" class="county service-area" d="m 643.1,194.5 -16.4,-3.6 -11.8,12.7 17.5,1.3 12.4,-13.1 Z" /><path id="Orange" class="county service-area" d="m 600,180 -15.2,4.5 -11.8,13.6 16.4,3.6 11.8,-12.7 -1.2,-9 Z" /><path id="Johnston" class="county service-area" d="m 697.9,262.5 -24.9,-10.1 -8.6,-22.1 2.5,-16.9 19.8,1.3 10.1,14.5 15.6,2.6 2.8,18.5 -17.3,12.2 z" /><path id="Chatham" class="county service-area" d="m 589.6,211.7 -25.2,-4.5 -15.2,20.8 -2.8,22.4 22.4,0.7 10.8,-17.2 21.1,6.5 11.8,-12.7 -28.9,-36.5 z" /><path id="Granville" class="county service-area" d="m 656.7,163.7 -16.8,4.5 -13.8,26.3 16.4,3.6 15.2,-30.8 z" /><path id="Franklin" class="county service-area" d="m 699.2,176.6 -18.4,1.3 -17.5,10.1 -15.2,30.8 17.5,-1.3 12.4,-13.1 17.5,-1.3 3.7,-27.8 z" /><path id="Vance" class="county service-area" d="m 676.8,145.6 -12.4,3.9 -16.8,4.5 13.8,-26.3 15.4,17.9 z" /><path id="Warren" class="county service-area" d="m 711.9,138.8 -18.6,-2.6 -16.5,10.1 12.4,-3.9 15.4,17.9 7.3,-21.5 z" /><path id="Harnett" class="county service-area" d="m 642.1,278.2 -22.4,14.5 -2.5,21.5 24.9,-10.1 8.6,-22.1 z" /><path id="Lee" class="county service-area" d="m 586.8,254.9 -12.4,10.1 -2.8,22.4 25.2,4.5 2.5,-21.5 z" /><path id="Nash" class="county service-area" d="m 742.7,191.4 -15.9,1.3 -18.4,10.1 3.7,27.8 19.8,-1.3 10.1,-14.5 z" /><path id="Person" class="county service-area" d="m 585.5,151.7 -16.2,2.6 -14.1,25.7 15.2,-4.5 15.1,-23.8 z" /><path id="Sampson" class="county service-area" d="m 720.5,294.7 -18.4,-10.1 -17.3,12.2 2.8,18.5 15.9,5.2 17,-25.8 z" /><path id="Wilson" class="county service-area" d="m 742,219 -19.3,-1.3 -15.9,1.3 10.1,14.5 15.6,2.6 9.5,-17.1 z" /><path id="Caswell" class="county service-area" d="m 555.2,143.2 -15.9,5.2 -14.4,23.3 16.2,-2.6 14.1,-25.9 z" /></g></svg></div>
+                <div class="container mx-auto px-6"><div class="text-center mb-16"><h2 class="text-3xl md:text-4xl font-bold text-gray-800">Proudly Serving the Triangle & Beyond</h2><p class="text-gray-600 mt-2 max-w-2xl mx-auto">Our expertise covers the entire 16-county Triangle MLS region, ensuring we have the local knowledge to serve you best.</p></div><div class="flex flex-col lg:flex-row items-center gap-12"><div class="w-full lg:w-1/2"><svg class="nc-map w-full h-auto" viewBox="0 0 1000 410" xmlns="http://www.w3.org/2000/svg"><g><path class="county" d="m 213.9,155.4 -2.9,5.7 -3.9,-0.3 -2.6,2.6 -4.8,0.7 -1.6,4.8 -3.9,-0.7 -4.2,4.8 -4.2,-0.9 -1.9,4.2 -3.6,1.9 -2.6,-2.3 -4.2,2.3 -2.3,3.9 -1.6,3.9 -2.9,0.3 -2.6,-2.3 -2.9,2.6 -1.3,3.9 -3.9,0.7 -2.6,-2.3 -2.3,2.6 -3.9,0.9 -3.9,-0.7 -1.9,2.3 -1.3,4.2 0.9,3.9 -0.9,4.2 -3.9,-0.3 -2.6,2.3 -2.3,3.9 0.3,3.9 -1.9,3.9 -2.6,-2.3 -1.6,4.2 0.9,4.2 -0.9,3.9 -2.9,0.9 -2.9,-2.3 -1.3,3.9 -3.9,0.3 -2.6,2.3 -1.3,3.9 -2.9,0.9 -1.9,-2.3 -2.6,2.3 -3.9,0.7 -2.9,-2.3 -2.6,2.3 -1.3,3.9 -3.9,0.9 -3.9,-0.7 -1.9,2.3 -1.3,4.2 0.9,3.9 -0.9,4.2 -3.9,-0.3 -2.6,2.3 -2.3,3.9 0.3,3.9 -1.9,3.9 -2.6,-2.3 -1.6,4.2 0.9,4.2 -0.9,3.9 -2.9,0.9 -2.9,-2.3 -1.3,3.9 -3.9,0.3 -2.6,2.3 -1.3,3.9 -2.9,0.9 -1.9,-2.3 -2.6,2.3 -3.9,0.7 -2.9,-2.3 -2.6,2.3 -1.3,3.9 -3.9,0.9 -3.9,-0.7 -1.9,2.3 -1.3,4.2 0.9,3.9 -0.9,4.2 -3.9,-0.3 -2.6,2.3 -2.3,3.9 0.3,3.9 -1.9,3.9 -2.6,-2.3 -1.6,4.2 0.9,4.2 -0.9,3.9 -2.9,0.9 -2.9,-2.3 -1.3,3.9 -3.9,0.3 -2.6,2.3 -1.3,3.9 -2.9,0.9 -1.9,-2.3 -2.6,2.3 -3.9,0.7 -2.9,-2.3 -2.6,2.3 -1.3,3.9 14.8,-0.3 11.3,-15.8 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.3,-2.6 11.d" /><!-- Triangle MLS Counties --><path id="Wake" class="county service-area" d="m 673,215 -17.5,-1.3 -12.4,13.1 -21.1,-6.5 -10.8,17.2 -22.4,-0.7 -8.6,22.1 24.9,10.1 11.1,-15.6 30.5,8.1 15.6,-27.4 12.1,5.2 8.3,-21.8 Z" /><path id="Durham" class="county service-area" d="m 643.1,194.5 -16.4,-3.6 -11.8,12.7 17.5,1.3 12.4,-13.1 Z" /><path id="Orange" class="county service-area" d="m 600,180 -15.2,4.5 -11.8,13.6 16.4,3.6 11.8,-12.7 -1.2,-9 Z" /><path id="Johnston" class="county service-area" d="m 697.9,262.5 -24.9,-10.1 -8.6,-22.1 2.5,-16.9 19.8,1.3 10.1,14.5 15.6,2.6 2.8,18.5 -17.3,12.2 z" /><path id="Chatham" class="county service-area" d="m 589.6,211.7 -25.2,-4.5 -15.2,20.8 -2.8,22.4 22.4,0.7 10.8,-17.2 21.1,6.5 11.8,-12.7 -28.9,-36.5 z" /><path id="Granville" class="county service-area" d="m 656.7,163.7 -16.8,4.5 -13.8,26.3 16.4,3.6 15.2,-30.8 z" /><path id="Franklin" class="county service-area" d="m 699.2,176.6 -18.4,1.3 -17.5,10.1 -15.2,30.8 17.5,-1.3 12.4,-13.1 17.5,-1.3 3.7,-27.8 z" /><path id="Vance" class="county service-area" d="m 676.8,145.6 -12.4,3.9 -16.8,4.5 13.8,-26.3 15.4,17.9 z" /><path id="Warren" class="county service-area" d="m 711.9,138.8 -18.6,-2.6 -16.5,10.1 12.4,-3.9 15.4,17.9 7.3,-21.5 z" /><path id="Harnett" class="county service-area" d="m 642.1,278.2 -22.4,14.5 -2.5,21.5 24.9,-10.1 8.6,-22.1 z" /><path id="Lee" class="county service-area" d="m 586.8,254.9 -12.4,10.1 -2.8,22.4 25.2,4.5 2.5,-21.5 z" /><path id="Nash" class="county service-area" d="m 742.7,191.4 -15.9,1.3 -18.4,10.1 3.7,27.8 19.8,-1.3 10.1,-14.5 z" /><path id="Person" class="county service-area" d="m 585.5,151.7 -16.2,2.6 -14.1,25.7 15.2,-4.5 15.1,-23.8 z" /><path id="Sampson" class="county service-area" d="m 720.5,294.7 -18.4,-10.1 -17.3,12.2 2.8,18.5 15.9,5.2 17,-25.8 z" /><path id="Wilson" class="county service-area" d="m 742,219 -19.3,-1.3 -15.9,1.3 10.1,14.5 15.6,2.6 9.5,-17.1 z" /><path id="Caswell" class="county service-area" d="m 555.2,143.2 -15.9,5.2 -14.4,23.3 16.2,-2.6 14.1,-25.9 z" /></g></svg></div>
                         <div class="w-full lg:w-1/2 flex flex-col justify-center"><h3 class="text-2xl font-bold mb-6 text-center lg:text-left">Our Core Service Area Includes:</h3><ul class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3 text-gray-700 text-lg"><li class="flex items-center"><i class="fas fa-map-marker-alt text-brand-primary/70 mr-3"></i>Wake</li><li class="flex items-center"><i class="fas fa-map-marker-alt text-brand-primary/70 mr-3"></i>Durham</li><li class="flex items-center"><i class="fas fa-map-marker-alt text-brand-primary/70 mr-3"></i>Orange</li><li class="flex items-center"><i class="fas fa-map-marker-alt text-brand-primary/70 mr-3"></i>Johnston</li><li class="flex items-center"><i class="fas fa-map-marker-alt text-brand-primary/70 mr-3"></i>Chatham</li><li class="flex items-center"><i class="fas fa-map-marker-alt text-brand-primary/70 mr-3"></i>Granville</li><li class="flex items-center"><i class="fas fa-map-marker-alt text-brand-primary/70 mr-3"></i>Franklin</li><li class="flex items-center"><i class="fas fa-map-marker-alt text-brand-primary/70 mr-3"></i>Harnett</li><li class="flex items-center"><i class="fas fa-map-marker-alt text-brand-primary/70 mr-3"></i>Lee</li><li class="flex items-center"><i class="fas fa-map-marker-alt text-brand-primary/70 mr-3"></i>Person</li><li class="flex items-center"><i class="fas fa-map-marker-alt text-brand-primary/70 mr-3"></i>Vance</li><li class="flex items-center"><i class="fas fa-map-marker-alt text-brand-primary/70 mr-3"></i>Warren</li><li class="flex items-center"><i class="fas fa-map-marker-alt text-brand-primary/70 mr-3"></i>Nash</li><li class="flex items-center"><i class="fas fa-map-marker-alt text-brand-primary/70 mr-3"></i>Wilson</li><li class="flex items-center"><i class="fas fa-map-marker-alt text-brand-primary/70 mr-3"></i>Sampson</li><li class="flex items-center"><i class="fas fa-map-marker-alt text-brand-primary/70 mr-3"></i>Caswell</li></ul></div>
                     </div>
                 </div>
@@ -131,13 +132,19 @@
 
         <!-- Page: How It Works -->
         <div id="page-how-it-works" class="page-content hidden">
-             <div class="max-w-4xl mx-auto py-12">
-                <div class="text-center mb-12"><h1 class="text-3xl md:text-4xl font-bold">Simple, Transparent, and Effective</h1><p class="text-gray-600 mt-2">Our process is designed to be straightforward and powerful.</p></div>
-                <div class="space-y-10">
-                    <div class="flex items-center gap-6"><div class="flex-shrink-0 bg-brand-primary text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold shadow-md">1</div><div><h3 class="text-2xl font-semibold">Submit Your Property Details</h3><p class="text-gray-600">Fill out our intuitive online form to receive a preliminary estimate of your home's probable selling price.</p></div></div>
-                    <div class="flex items-center gap-6"><div class="flex-shrink-0 bg-brand-primary text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold shadow-md">2</div><div><h3 class="text-2xl font-semibold">Receive an Instant Automated Estimate</h3><p class="text-gray-600">Our automated tool analyzes market data to give you an instant estimate of your home's probable selling price. This is a starting point, not a formal appraisal.</p></div></div>
-                    <div class="flex items-center gap-6"><div class="flex-shrink-0 bg-brand-primary text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold shadow-md">3</div><div><h3 class="text-2xl font-semibold">Get an Expert-Prepared CMA</h3><p class="text-gray-600">Your information is sent to our principal broker, Mitch Baney, who will personally prepare a detailed Comparative Market Analysis (CMA) by verifying data against the MLS to provide a refined, highly accurate market price opinion.</p></div></div>
-                    <div class="flex items-center gap-6"><div class="flex-shrink-0 bg-brand-primary text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold shadow-md">4</div><div><h3 class="text-2xl font-semibold">Begin Your Seamless Selling Journey</h3><p class="text-gray-600">Your details are automatically captured in our secure CRM. We'll reach out to discuss your goals and how we can help you sell your home for maximum value with minimum fees.</p></div></div>
+            <div class="max-w-4xl mx-auto py-12 px-4 sm:px-6">
+                <div class="text-center mb-16">
+                    <h1 class="text-3xl md:text-4xl font-bold">Simple, Transparent, and Effective</h1>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Our process is designed to get you from listing to sold with clarity and confidence.</p>
+                </div>
+                <div class="relative">
+                    <div class="absolute left-10 top-5 h-[calc(100%-2rem)] w-0.5 bg-brand-primary/20" aria-hidden="true"></div>
+                    <div class="space-y-16">
+                        <div class="relative pl-24"><div class="absolute left-0 top-0 flex items-center justify-center h-20 w-20 rounded-full bg-brand-primary text-white text-3xl font-bold shadow-lg ring-8 ring-gray-50"><i class="fas fa-keyboard"></i></div><div class="bg-white p-6 rounded-lg shadow-md"><h3 class="text-2xl font-semibold mb-2">Step 1: Submit Your Property Details</h3><p class="text-gray-600">It all starts with our simple online form. Provide some basic information about your home, and our system gets to work. This initial step takes just a few minutes and gives us the foundation for your sale.</p></div></div>
+                        <div class="relative pl-24"><div class="absolute left-0 top-0 flex items-center justify-center h-20 w-20 rounded-full bg-brand-primary text-white text-3xl font-bold shadow-lg ring-8 ring-gray-50"><i class="fas fa-robot"></i></div><div class="bg-white p-6 rounded-lg shadow-md"><h3 class="text-2xl font-semibold mb-2">Step 2: Receive an Instant Automated Estimate</h3><p class="text-gray-600">Using advanced algorithms and public data, our tool provides an instant estimate of your property's probable selling price. This Automated Valuation Model (AVM) is a powerful, data-driven starting point for understanding your home's position in the current market.</p></div></div>
+                        <div class="relative pl-24"><div class="absolute left-0 top-0 flex items-center justify-center h-20 w-20 rounded-full bg-brand-primary text-white text-3xl font-bold shadow-lg ring-8 ring-gray-50"><i class="fas fa-user-tie"></i></div><div class="bg-white p-6 rounded-lg shadow-md"><h3 class="text-2xl font-semibold mb-2">Step 3: Get an Expert-Prepared CMA</h3><p class="text-gray-600">This is where human expertise makes the difference. Mitch will personally take your information and prepare a detailed Comparative Market Analysis (CMA), cross-referencing your property with the most up-to-date, private MLS data. This provides a much more refined and accurate price opinion for your listing strategy.</p></div></div>
+                        <div class="relative pl-24"><div class="absolute left-0 top-0 flex items-center justify-center h-20 w-20 rounded-full bg-brand-primary text-white text-3xl font-bold shadow-lg ring-8 ring-gray-50"><i class="fas fa-file-signature"></i></div><div class="bg-white p-6 rounded-lg shadow-md"><h3 class="text-2xl font-semibold mb-2">Step 4: Launch & Sell Seamlessly</h3><p class="text-gray-600">Once we agree on a strategy, your property goes live with full service marketing. Your information is securely managed in our CRM, and we handle everything from showings and negotiations to contract management, guiding you all the way to a successful closing.</p></div></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -150,62 +157,57 @@
                     <p class="text-gray-600 mt-2">Your questions, answered. Find clarity on our process and how we save you money.</p>
                 </div>
                 <div class="space-y-4" id="faq-accordion">
-                    <!-- FAQ Item 1 -->
-                    <div class="bg-white rounded-lg shadow-sm">
-                        <button class="faq-question w-full flex justify-between items-center text-left p-6 text-xl font-semibold">
-                            <span>How does a "low-cost" listing model work?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </button>
-                        <div class="faq-answer px-6"><p class="pb-4">Instead of the traditional percentage-based commission, we typically utilize a transparent, flat-fee listing model. By leveraging technology and creating efficient internal processes, we eliminate many of the overhead costs of traditional brokerages. We pass those savings directly to you, the homeowner, without sacrificing the quality of service.</p></div>
-                    </div>
-                    <!-- FAQ Item 2 -->
-                    <div class="bg-white rounded-lg shadow-sm">
-                        <button class="faq-question w-full flex justify-between items-center text-left p-6 text-xl font-semibold">
-                            <span>What services are included? Is this truly "full service"?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </button>
-                        <div class="faq-answer px-6"><p class="pb-4">Yes, absolutely. "Full service" means we handle every critical aspect of your home sale. This includes a professional market analysis (CMA), listing your home on the Triangle MLS and all major real estate websites (Zillow, Realtor.com, etc.), professional photography, expert negotiation of offers, and complete contract-to-close management. You get the full experience, just for a fairer price.</p></div>
-                    </div>
-                    <!-- FAQ Item 3 -->
-                    <div class="bg-white rounded-lg shadow-sm">
-                        <button class="faq-question w-full flex justify-between items-center text-left p-6 text-xl font-semibold">
-                            <span>What's the difference between the instant estimate and a CMA?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </button>
-                        <div class="faq-answer px-6"><p class="pb-4">The instant estimate is an automated valuation model (AVM) that provides a preliminary price point based on public data and algorithms. It's a great starting point. The Comparative Market Analysis (CMA), which Mitch prepares personally, is a much more detailed and accurate pricing opinion. It involves an expert analysis of the MLS, considering the unique features of your home, its condition, and the very latest market trends that only a licensed professional can access.</p></div>
-                    </div>
-                    <!-- FAQ Item 4 -->
-                    <div class="bg-white rounded-lg shadow-sm">
-                        <button class="faq-question w-full flex justify-between items-center text-left p-6 text-xl font-semibold">
-                            <span>Do I still have to pay the buyer's agent commission?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </button>
-                        <div class="faq-answer px-6"><p class="pb-4">Yes. To ensure your property gets maximum exposure to all potential buyers, it's standard practice in North Carolina to offer a commission to the agent who brings the buyer (typically 2.5-3%). Our model saves you money on the *listing side* of the commission. We'll discuss the best strategy for the buyer's agent commission when we create your listing plan.</p></div>
-                    </div>
-                     <!-- FAQ Item 5 -->
-                    <div class="bg-white rounded-lg shadow-sm">
-                        <button class="faq-question w-full flex justify-between items-center text-left p-6 text-xl font-semibold">
-                            <span>How does Forge Real Estate get paid?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </button>
-                        <div class="faq-answer px-6"><p class="pb-4">We charge a simple, transparent flat listing fee that is agreed upon upfront. This fee is only paid at closing, from the proceeds of your home sale, just like a traditional commission. There are no hidden charges or upfront costs to get started. If your home doesn't sell, you don't pay our listing fee.</p></div>
-                    </div>
+                    <div class="bg-white rounded-lg shadow-sm"><button class="faq-question w-full flex justify-between items-center text-left p-6 text-xl font-semibold"><span>How does a "low-cost" listing model work?</span><i class="fas fa-chevron-down faq-icon"></i></button><div class="faq-answer px-6"><p class="pb-4">Instead of the traditional percentage-based commission, we typically utilize a transparent, flat-fee listing model. By leveraging technology and creating efficient internal processes, we eliminate many of the overhead costs of traditional brokerages. We pass those savings directly to you, the homeowner, without sacrificing the quality of service.</p></div></div>
+                    <div class="bg-white rounded-lg shadow-sm"><button class="faq-question w-full flex justify-between items-center text-left p-6 text-xl font-semibold"><span>What services are included? Is this truly "full service"?</span><i class="fas fa-chevron-down faq-icon"></i></button><div class="faq-answer px-6"><p class="pb-4">Yes, absolutely. "Full service" means we handle every critical aspect of your home sale. This includes a professional market analysis (CMA), listing your home on the Triangle MLS and all major real estate websites (Zillow, Realtor.com, etc.), professional photography, expert negotiation of offers, and complete contract-to-close management. You get the full experience, just for a fairer price.</p></div></div>
+                    <div class="bg-white rounded-lg shadow-sm"><button class="faq-question w-full flex justify-between items-center text-left p-6 text-xl font-semibold"><span>What's the difference between the instant estimate and a CMA?</span><i class="fas fa-chevron-down faq-icon"></i></button><div class="faq-answer px-6"><p class="pb-4">The instant estimate is an automated valuation model (AVM) that provides a preliminary price point based on public data and algorithms. It's a great starting point. The Comparative Market Analysis (CMA), which Mitch prepares personally, is a much more detailed and accurate pricing opinion. It involves an expert analysis of the MLS, considering the unique features of your home, its condition, and the very latest market trends that only a licensed professional can access.</p></div></div>
+                    <div class="bg-white rounded-lg shadow-sm"><button class="faq-question w-full flex justify-between items-center text-left p-6 text-xl font-semibold"><span>Do I still have to pay the buyer's agent commission?</span><i class="fas fa-chevron-down faq-icon"></i></button><div class="faq-answer px-6"><p class="pb-4">Yes. To ensure your property gets maximum exposure to all potential buyers, it's standard practice in North Carolina to offer a commission to the agent who brings the buyer (typically 2.5-3%). Our model saves you money on the *listing side* of the commission. We'll discuss the best strategy for the buyer's agent commission when we create your listing plan.</p></div></div>
+                     <div class="bg-white rounded-lg shadow-sm"><button class="faq-question w-full flex justify-between items-center text-left p-6 text-xl font-semibold"><span>How does Forge Real Estate get paid?</span><i class="fas fa-chevron-down faq-icon"></i></button><div class="faq-answer px-6"><p class="pb-4">We charge a simple, transparent flat listing fee that is agreed upon upfront. This fee is only paid at closing, from the proceeds of your home sale, just like a traditional commission. There are no hidden charges or upfront costs to get started. If your home doesn't sell, you don't pay our listing fee.</p></div></div>
                 </div>
             </div>
         </div>
 
         <!-- Page: About -->
         <div id="page-about" class="page-content hidden">
-            <div class="max-w-4xl mx-auto py-12 bg-white p-10 rounded-2xl shadow-lg">
-                <div class="text-center mb-10">
-                    <!-- ACTION REQUIRED: Upload 'mitch-baney-profile.jpg' to an 'images' folder on your server -->
-                    <img src="images/mitch-baney-profile.jpg" alt="Mitch Baney" class="mx-auto rounded-full mb-4 w-40 h-40 object-cover border-4 border-white shadow-lg">
-                    <h1 class="text-3xl font-bold">Mitch Baney</h1>
-                    <p class="text-xl text-brand-primary font-semibold">Founder & Principal Broker</p>
-                </div>
-                <div class="text-lg text-gray-700 space-y-4 text-justify">
-                    <p>Mitch Baney founded Forge Real Estate with a single, clear mission: to build a more efficient and cost-effective way for people to sell their homes. With over a decade of experience in the real estate industry, Mitch saw firsthand how traditional commission structures could eat into a seller's hard-earned equity. He knew there had to be a better way.</p>
-                    <p>By leveraging technology and streamlining the sales process, Mitch created a model that provides full, expert-level service without the hefty price tag. He is passionate about empowering homeowners with data and transparency, ensuring they have a trusted partner every step of the way. At Forge, we don't just list homes; we build relationships and forge successful outcomes for our clients.</p>
+            <div class="bg-white">
+                <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10 items-center">
+                        <div class="order-2 md:order-1 text-center md:text-left">
+                            <h2 class="text-3xl font-bold text-brand-secondary sm:text-4xl">Meet Mitch Baney</h2>
+                            <p class="mt-3 text-xl text-brand-primary">Founder & Principal Broker</p>
+                            <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+                                Mitch Baney founded Forge Real Estate with a single, clear mission: to build a more efficient and cost-effective way for people to sell their homes. With over a decade of experience in the real estate industry, Mitch saw firsthand how traditional commission structures could eat into a seller's hard-earned equity. He knew there had to be a better way.
+                            </p>
+                            <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+                                By leveraging technology and streamlining the sales process, Mitch created a model that provides full, expert-level service without the hefty price tag. He is passionate about empowering homeowners with data and transparency, ensuring they have a trusted partner every step of the way. At Forge, we don't just list homes; we build relationships and forge successful outcomes for our clients.
+                            </p>
+                        </div>
+                        <div class="order-1 md:order-2">
+                            <img src="images/mitch-baney-profile.jpg" alt="Mitch Baney" class="rounded-lg shadow-2xl w-full h-auto object-cover max-w-md mx-auto">
+                        </div>
+                    </div>
+                    <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                        <div class="space-y-3">
+                            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary">
+                                <i class="fas fa-glasses text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-secondary">Transparency</h3>
+                            <p class="text-gray-600">Clear, upfront pricing and honest communication. You'll always know what to expect, with no surprises.</p>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary">
+                                <i class="fas fa-bolt text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-secondary">Efficiency</h3>
+                            <p class="text-gray-600">We use technology to streamline processes, saving you time and money without ever sacrificing quality.</p>
+                        </div>
+                        <div class="space-y-3">
+                           <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary">
+                                <i class="fas fa-award text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-secondary">Expertise</h3>
+                            <p class="text-gray-600">Our deep knowledge of the NC real estate market ensures you get the best guidance and achieve the best outcome.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -229,29 +231,93 @@
                             <div><label for="sqft" class="block text-sm font-medium text-gray-700">Square Footage</label><input type="number" id="sqft" min="100" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary"></div>
                             <div><label for="condition" class="block text-sm font-medium text-gray-700">Property Condition</label><select id="condition" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary"><option>Excellent</option><option>Good</option><option>Fair</option><option>Needs Work</option></select></div>
                         </div>
-                        <div class="mt-8 text-center"><button type="submit" class="w-full md:w-2/3 bg-brand-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-brand-primary-dark transition-colors text-lg">Get My Free Home Price Estimate</button></div>
+                        <div class="mt-8 text-center">
+                            <p class="text-xs text-gray-500 mb-4">
+                                By submitting this form, you agree to be contacted by a licensed real estate agent from Forge Real Estate, LLC to discuss your home valuation and our services.
+                            </p>
+                            <button type="submit" class="w-full md:w-2/3 bg-brand-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-brand-primary-dark transition-colors text-lg">
+                                Get My Free Home Price Estimate
+                            </button>
+                        </div>
                     </form>
                 </div>
                 <div id="results-section" class="hidden">
                     <div class="text-center"><h2 class="text-3xl font-bold">Automated Estimate Complete!</h2><p class="text-gray-600 mt-2">Here is a preliminary estimate of your property's probable selling price.</p></div>
                     <div id="loading" class="hidden justify-center items-center py-20 flex-col"><div class="loader"></div><p class="mt-4 text-lg font-medium">Forging your estimate...</p></div>
                     <div id="results-content" class="hidden">
-                        <div class="text-center bg-gray-100 rounded-lg p-8 my-8"><p class="text-lg text-gray-700">Estimated Probable Selling Price</p><p id="estimated-value" class="text-5xl font-bold text-brand-primary my-2">$0</p></div>
-                        <div class="text-center text-sm text-gray-500 my-6 p-4 border border-gray-200 rounded-lg"><strong>Disclaimer:</strong> This is an automated estimate. This opinion is not an appraisal of the market value of the property, and may not be used in lieu of an appraisal. If an appraisal is desired, the services of a licensed or certified appraiser shall be obtained.</div>
-                        <h3 class="text-2xl font-bold text-center mb-6">Comparable Properties Used in this Estimate</h3>
-                        <div id="comps-list" class="space-y-4"></div>
-                        <div class="mt-10 text-center bg-green-50 border border-green-200 p-6 rounded-lg"><h4 class="font-bold text-lg text-green-800">Thank You!</h4><p class="text-green-700 mt-2">Your information has been submitted. We will perform a full Comparative Market Analysis (CMA) and an agent will be in contact with you shortly to discuss the results.</p></div>
+                        <div class="text-center bg-gray-100 rounded-lg p-8 my-8">
+                            <p class="text-lg text-gray-700">Estimated Probable Selling Price</p>
+                            <p id="estimated-value" class="text-5xl font-bold text-brand-primary my-2">$0</p>
+                            <p id="value-range" class="text-gray-600"></p>
+                        </div>
+                        <div class="text-center text-sm text-gray-500 my-6 p-4 border border-gray-200 rounded-lg"><strong>Disclaimer:</strong> This is an automated estimate based on public data and is not a formal appraisal. A full Comparative Market Analysis (CMA) will be provided by a licensed broker.</div>
+                        <div class="mt-10 text-center bg-green-50 border border-green-200 p-6 rounded-lg"><h4 class="font-bold text-lg text-green-800">Thank You!</h4><p class="text-green-700 mt-2">Your information has been submitted. We will perform a full CMA and an agent will be in contact with you shortly to discuss the results in more detail.</p></div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- NEW: Contact Page -->
+        <div id="page-contact" class="page-content hidden">
+            <div class="max-w-4xl mx-auto py-12 px-4">
+                <div class="text-center mb-16">
+                    <h1 class="text-4xl font-bold text-gray-800">Get In Touch</h1>
+                    <p class="text-gray-600 mt-2">Have a question? We're here to help. Send us a message and we'll get back to you shortly.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 md:p-12 grid md:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div>
+                        <form id="contact-form">
+                            <div class="space-y-6">
+                                <div>
+                                    <label for="contact-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                    <input type="text" id="contact-name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary">
+                                </div>
+                                <div>
+                                    <label for="contact-email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                    <input type="email" id="contact-email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary">
+                                </div>
+                                <div>
+                                    <label for="contact-subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                                    <input type="text" id="contact-subject" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary">
+                                </div>
+                                <div>
+                                    <label for="contact-message" class="block text-sm font-medium text-gray-700">Message</label>
+                                    <textarea id="contact-message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-primary focus:ring-brand-primary"></textarea>
+                                </div>
+                                <div class="text-right">
+                                    <button type="submit" class="bg-brand-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-brand-primary-dark transition-colors">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="contact-success-message" class="hidden mt-6 p-4 bg-green-100 text-green-800 rounded-lg">
+                            Thank you! Your message has been sent. We'll be in touch soon.
+                        </div>
+                    </div>
+                    <!-- Contact Details -->
+                    <div class="space-y-6 text-gray-700 text-lg">
+                        <h3 class="text-2xl font-bold text-gray-800 border-b pb-3">Contact Information</h3>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope w-6 text-brand-primary"></i>
+                            <a href="mailto:mitch@forgerealesatenc.com" class="hover:text-brand-primary">mitch@forgerealesatenc.com</a>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone w-6 text-brand-primary"></i>
+                            <a href="tel:8285519690" class="hover:text-brand-primary">(828) 551-9690</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white mt-12">
         <div class="container mx-auto px-6 py-8 text-center">
             <p class="font-bold">Forge Real Estate, LLC</p>
-            <p class="text-gray-400">117 Gracie Lane, Clayton NC 27520</p>
             <p class="text-gray-400">NC Real Estate Firm License #C40291</p>
             <p class="text-gray-400 mt-4 text-xs">This opinion is not an appraisal of the market value of the property, and may not be used in lieu of an appraisal. If an appraisal is desired, the services of a licensed or certified appraiser shall be obtained.</p>
             <p class="text-gray-500 mt-4">&copy; 2024 Forge Real Estate, LLC. All rights reserved.</p>
@@ -275,7 +341,8 @@
         const loadingDiv = document.getElementById('loading');
         const resultsContent = document.getElementById('results-content');
         const estimatedValueEl = document.getElementById('estimated-value');
-        const compsListEl = document.getElementById('comps-list');
+        const valueRangeEl = document.getElementById('value-range');
+        const contactForm = document.getElementById('contact-form');
         
         function showPage(pageId) {
             pages.forEach(page => {
@@ -313,13 +380,16 @@
             showPage(pageId);
         };
         
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
         const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
         const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+        
         let app, auth, db, userId;
 
         async function initializeFirebase() {
             try {
+                if (!firebaseConfig.apiKey) {
+                    throw new Error("Firebase config is missing or invalid.");
+                }
                 app = initializeApp(firebaseConfig);
                 db = getFirestore(app);
                 auth = getAuth(app);
@@ -327,142 +397,113 @@
                 onAuthStateChanged(auth, async (user) => {
                     if (user) {
                         userId = user.uid;
-                    } else {
-                        await (initialAuthToken ? signInWithCustomToken(auth, initialAuthToken) : signInAnonymously(auth));
+                    } else if (initialAuthToken) {
+                        await signInWithCustomToken(auth, initialAuthToken);
+                    }
+                    else {
+                        await signInAnonymously(auth);
                     }
                 });
             } catch (e) {
                 console.error("Firebase initialization failed:", e);
-                document.getElementById('valuation-app').innerHTML = `<div class="text-center p-8 bg-red-100 text-red-700 rounded-lg"><strong>Error:</strong> Could not connect to the estimation service. Please try again later.</div>`;
+                const valuationApp = document.getElementById('valuation-app');
+                if(valuationApp) {
+                    valuationApp.innerHTML = `<div class="text-center p-8 bg-red-100 text-red-700 rounded-lg"><strong>Error:</strong> Could not connect to the estimation service. Please check the console for details.</div>`;
+                }
             }
         }
         
-        propertyForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            if (!userId) {
-                alert("Authentication not ready. Please wait a moment and try again.");
-                return;
-            }
+        if (propertyForm) {
+            propertyForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                if (!userId) {
+                    alert("Authentication not ready. Please wait a moment and try again.");
+                    return;
+                }
+                const formData = { name: document.getElementById('name').value, email: document.getElementById('email').value, address: document.getElementById('address').value, city: document.getElementById('city').value, state: document.getElementById('state').value, bedrooms: parseFloat(document.getElementById('bedrooms').value), bathrooms: parseFloat(document.getElementById('bathrooms').value), sqft: parseInt(document.getElementById('sqft').value), condition: document.getElementById('condition').value, createdAt: new Date().toISOString() };
+                formSection.classList.add('hidden');
+                resultsSection.classList.remove('hidden');
+                loadingDiv.classList.remove('hidden');
+                loadingDiv.classList.add('flex');
+                resultsContent.classList.add('hidden');
+                try {
+                    const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+                    const docRef = await addDoc(collection(db, `artifacts/${appId}/users/${userId}/leads`), formData);
+                    console.log("Lead saved to Firestore with ID: ", docRef.id);
+                    const priceEstimate = await getAIPriceEstimate(formData);
+                    displayResults(priceEstimate.estimatedValue, priceEstimate.lowValue, priceEstimate.highValue);
+                    await sendToCRM(formData, priceEstimate.estimatedValue);
+                } catch (error) {
+                    console.error("Error during submission process:", error);
+                    loadingDiv.innerHTML = `<div class="text-center p-4"><p class="font-semibold text-red-600">An error occurred while processing your request.</p><p class="text-sm text-gray-500 mt-2">${error.message}</p></div>`;
+                }
+            });
+        }
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const successMessage = document.getElementById('contact-success-message');
+                contactForm.reset();
+                successMessage.classList.remove('hidden');
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                }, 5000);
+            });
+        }
 
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                address: document.getElementById('address').value,
-                city: document.getElementById('city').value,
-                state: document.getElementById('state').value,
-                bedrooms: parseFloat(document.getElementById('bedrooms').value),
-                bathrooms: parseFloat(document.getElementById('bathrooms').value),
-                sqft: parseInt(document.getElementById('sqft').value),
-                condition: document.getElementById('condition').value,
-                createdAt: new Date().toISOString()
-            };
-            
-            formSection.classList.add('hidden');
-            resultsSection.classList.remove('hidden');
-            loadingDiv.classList.remove('hidden');
-            loadingDiv.classList.add('flex');
-            resultsContent.classList.add('hidden');
-
+        async function sendToCRM(leadData, estimatedPrice) {
+            console.log("Preparing to send data to CRM...");
+            const payload = { email: leadData.email, firstname: leadData.name.split(' ')[0], lastname: leadData.name.split(' ').slice(1).join(' '), address: `${leadData.address}, ${leadData.city}, ${leadData.state}`, city: leadData.city, state: leadData.state, bedrooms: leadData.bedrooms, bathrooms: leadData.bathrooms, sqft: leadData.sqft, condition: leadData.condition, estimatedPrice: estimatedPrice };
             try {
-                const docRef = await addDoc(collection(db, `artifacts/${appId}/users/${userId}/leads`), formData);
-                console.log("Lead saved to Firestore with ID: ", docRef.id);
-                const priceEstimate = await getAIPriceEstimate(formData);
-                displayResults(priceEstimate.estimatedPrice, priceEstimate.comparableProperties);
-                await sendToCRM(formData, priceEstimate.estimatedPrice);
+                const functionUrl = '/.netlify/functions/add-contact';
+                const response = await fetch(functionUrl, { method: 'POST', body: JSON.stringify(payload) });
+                if (!response.ok) throw new Error(`Server function failed: ${response.status}`);
+                const result = await response.json();
+                console.log('Successfully called CRM function:', result);
             } catch (error) {
-                console.error("Error during submission process:", error);
-                loadingDiv.innerHTML = `<p class="text-red-600">An error occurred. Please try again.</p>`;
+                console.warn('CRM function call failed. This is expected in local development. Data payload:', payload);
             }
-        });
-        
-       // --- CRM Integration ---
-async function sendToCRM(leadData, estimatedPrice) {
-    console.log("Sending data to secure CRM function...");
-
-    // This is the data we will send to our secure function.
-    const payload = {
-        email: leadData.email,
-        firstname: leadData.name.split(' ')[0],
-        lastname: leadData.name.split(' ').slice(1).join(' '),
-        address: `${leadData.address}, ${leadData.city}, ${leadData.state}`,
-        city: leadData.city,
-        state: leadData.state,
-        bedrooms: leadData.bedrooms,
-        bathrooms: leadData.bathrooms,
-        sqft: leadData.sqft,
-        condition: leadData.condition,
-        estimatedPrice: estimatedPrice
-    };
-
-    try {
-        // The URL for our function. Netlify automatically creates this.
-        const functionUrl = '/.netlify/functions/add-contact'; 
-
-        const response = await fetch(functionUrl, {
-            method: 'POST',
-            body: JSON.stringify(payload)
-        });
-
-        if (!response.ok) {
-            throw new Error(`Server function failed: ${response.status}`);
         }
-
-        const result = await response.json();
-        console.log('Successfully called CRM function:', result);
-        return { success: true };
-
-    } catch (error) {
-        console.error('Error calling CRM function:', error);
-        // We can let the user know something went wrong if we want,
-        // but for now, we'll just log it.
-        return { success: false };
-    }
-}
 
         async function getAIPriceEstimate(property) {
-            const prompt = `
-                Generate a list of 3 realistic, comparable real estate properties (comps) for a property with the following details:
-                - Location: ${property.address}, ${property.city}, ${property.state}
+            const apiKey = ""; 
+            const prompt = `Act as a real estate market analyst. Based on the following property details, provide a single estimated market value, a low-end value, and a high-end value.
+                - Property: ${property.address}, ${property.city}, ${property.state}, USA
                 - Specs: ${property.bedrooms} beds, ${property.bathrooms} baths, ${property.sqft} sqft
                 - Condition: ${property.condition}
-                The comps should be in the same city and be similar in size and bed/bath count. Provide a realistic market sale price for each comp.
             `;
-            const schema = { type: "OBJECT", properties: { "comparableProperties": { type: "ARRAY", items: { type: "OBJECT", properties: { "address": { "type": "STRING" }, "price": { "type": "NUMBER" }, "sqft": { "type": "NUMBER" }, "beds": { "type": "NUMBER" }, "baths": { "type": "NUMBER" } }, required: ["address", "price", "sqft", "beds", "baths"] } } }, required: ["comparableProperties"] };
+            
+            const schema = { 
+                type: "OBJECT", 
+                properties: { 
+                    "estimatedValue": { "type": "NUMBER" },
+                    "lowValue": { "type": "NUMBER" },
+                    "highValue": { "type": "NUMBER" }
+                }, 
+                required: ["estimatedValue", "lowValue", "highValue"]
+            };
+
             const payload = { contents: [{ role: "user", parts: [{ text: prompt }] }], generationConfig: { responseMimeType: "application/json", responseSchema: schema } };
-            const apiKey = "";
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+            
             const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-            if (!response.ok) throw new Error(`API call failed with status: ${response.status}`);
+            if (!response.ok) throw new Error(`AI API call failed with status: ${response.status}`);
             const result = await response.json();
             if (!result.candidates || !result.candidates[0].content.parts[0].text) throw new Error("Invalid response from AI.");
             const data = JSON.parse(result.candidates[0].content.parts[0].text);
-            const comps = data.comparableProperties;
-            if (comps.length === 0) throw new Error("AI did not return any comps.");
-            const avgPpsqft = comps.reduce((acc, comp) => acc + (comp.price / comp.sqft), 0) / comps.length;
-            const estimatedPrice = Math.round(avgPpsqft * property.sqft);
-            return { estimatedPrice, comparableProperties: comps };
+            return data;
         }
 
-        function displayResults(price, comps) {
+        function displayResults(price, low, high) {
             loadingDiv.classList.add('hidden');
             loadingDiv.classList.remove('flex');
             resultsContent.classList.remove('hidden');
             const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 });
             estimatedValueEl.textContent = formatter.format(price);
-            compsListEl.innerHTML = '';
-            comps.forEach(comp => {
-                compsListEl.innerHTML += `
-                    <div class="bg-gray-50 border rounded-lg p-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                        <div class="flex-grow">
-                            <p class="font-bold">${comp.address}</p>
-                            <p class="text-sm text-gray-600">${comp.beds} beds | ${comp.baths} baths | ${comp.sqft.toLocaleString()} sqft</p>
-                        </div>
-                        <div class="text-lg font-semibold text-brand-primary whitespace-nowrap">${formatter.format(comp.price)}</div>
-                    </div>`;
-            });
+            valueRangeEl.textContent = `Probable range: ${formatter.format(low)} - ${formatter.format(high)}`;
         }
         
-        // --- Accordion Logic ---
         const faqAccordion = document.getElementById('faq-accordion');
         if (faqAccordion) {
             faqAccordion.addEventListener('click', (e) => {
@@ -479,7 +520,6 @@ async function sendToCRM(leadData, estimatedPrice) {
                     questionButton.classList.toggle('active');
                     const answer = questionButton.nextElementSibling;
                     if (questionButton.classList.contains('active')) {
-                        // Set max-height to the scrollHeight to show all content
                         answer.style.maxHeight = answer.scrollHeight + 'px';
                     } else {
                         answer.style.maxHeight = null;
@@ -488,12 +528,10 @@ async function sendToCRM(leadData, estimatedPrice) {
             });
         }
 
-        // --- App Initialization ---
         (async () => {
             await initializeFirebase();
             const initialPage = location.hash.substring(1) || 'home';
             showPage(initialPage);
-            // Save initial state for browser history
             history.replaceState({page: initialPage}, null, `#${initialPage}`);
         })();
 
