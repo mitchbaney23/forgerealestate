@@ -1,9 +1,9 @@
 // This is the code for your secure serverless function.
-// It will now handle the AI estimate, save to Firestore, and create the HubSpot contact.
+// It has been updated to use your custom "Forge Lead Status" property in HubSpot.
 
 const { initializeApp, cert, getApps } = require('firebase-admin/app');
 const { getFirestore } = require('firebase-admin/firestore');
-const fetch = require('node-fetch'); // Netlify functions use a slightly different way to fetch
+const fetch = require('node-fetch');
 
 exports.handler = async function(event) {
   if (event.httpMethod !== 'POST') {
@@ -50,7 +50,6 @@ exports.handler = async function(event) {
 };
 
 async function saveLeadToFirestore(leadData, estimate, firebaseCredentials) {
-    // Initialize Firebase Admin only if it hasn't been already.
     if (!getApps().length) {
         initializeApp({
             credential: cert(firebaseCredentials),
@@ -60,7 +59,6 @@ async function saveLeadToFirestore(leadData, estimate, firebaseCredentials) {
     const db = getFirestore();
     const leadWithEstimate = { ...leadData, ...estimate, createdAt: new Date() };
 
-    // This path is now secure and specific to your app
     await db.collection('leads').add(leadWithEstimate);
     console.log('Successfully saved lead to Firestore.');
 }
@@ -96,14 +94,18 @@ async function addContactToHubspot(leadData, estimate, apiKey) {
           firstname: leadData.name.split(' ')[0],
           lastname: leadData.name.split(' ').slice(1).join(' '),
           address: `${leadData.address}, ${leadData.city}, ${leadData.state}`,
-          automated_price_estimate: estimate.estimatedValue,
-          lead_status: "NEW"
+          // This is the updated property name
+          forge_lead_status: "NEW", 
+          automated_price_estimate: estimate.estimatedValue
         }
     };
     const hubspotApiUrl = 'https://api.hubapi.com/crm/v3/objects/contacts';
     const response = await fetch(hubspotApiUrl, {
         method: 'POST',
-        headers: { 'Authorization': `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+        headers: {
+            'Authorization': `Bearer ${apiKey}`,
+            'Content-Type': 'application/json'
+        },
         body: JSON.stringify(hubspotPayload)
     });
     if (!response.ok) {
